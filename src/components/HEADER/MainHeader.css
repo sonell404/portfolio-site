@@ -1,0 +1,40 @@
+.main-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid white;
+    height: 200px;
+    border-radius: 1.8rem 1.8rem 1.8rem 0;
+    padding-right: 5%;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: inline-block;
+    width: 400px;
+    height: 100%;
+    border-right: 3px solid white;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.about-container {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 100%;
+}
+
+.about {
+    position: absolute;
+    width: 95%;
+    height: auto;
+    top: -10%;
+    fill: #212121;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}

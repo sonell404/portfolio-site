@@ -1,0 +1,16 @@
+.son-el {
+  font-family: var(--ff-secondary);
+  font-style: var(--ff-secondary-italic);
+  font-weight: var(--ff-secondary-bold);
+}
+.about-text-container {
+  display: inline-block;
+  position: absolute;
+  top: 35vh;
+  right: 3px;
+}
+.about-text {
+  
+  text-align: right;
+  padding-right: 4rem;
+}

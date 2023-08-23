@@ -1,0 +1,48 @@
+.menu {
+  border: 3px solid white;
+  width: 403px;
+  height: 65vh;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+.menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+.menu > ul > li {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  box-sizing: border-box;
+  transition: border-radius 0.5s ease;
+
+}
+.menu > ul > li:hover {
+  outline: 3px solid white;
+  border-radius: 1.8rem;
+}
+.menu > ul > li > img {
+  height: 132px;
+}
+
+.menu-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 403px;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0 0 1.8rem 1.8rem;
+  transition: border-radius 0.3s ease;
+}
+.menu-button {
+  width: 2rem;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
