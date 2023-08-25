@@ -1,0 +1,22 @@
+.image-gallery-container {
+  position: absolute;
+  top: var(--size-1150);
+  z-index: 9999;
+  margin-left: 345px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  max-width: 100%;
+}
+
+.image-gallery__image {
+  max-width: 280px;
+  border-radius: var(--br-size);
+  margin: var(--size-300);
+}

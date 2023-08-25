@@ -1,9 +1,11 @@
-import HeaderContainer from './HEADER/HeaderContainer';
+import HeaderContainer from "./HEADER/HeaderContainer";
 
 function Home() {
-    return (
-        <HeaderContainer />
-    )
+  return (
+    <>
+      <HeaderContainer />
+    </>
+  );
 }
 
 export default Home;

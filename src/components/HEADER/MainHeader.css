@@ -3,15 +3,15 @@
     display: flex;
     justify-content: space-between;
     border: 3px solid white;
-    height: 200px;
-    border-radius: 1.8rem 1.8rem 1.8rem 0;
+    height: 166px;
+    border-radius: var(--br-size) var(--br-size) var(--br-size) 0;
     padding-right: 5%;
     overflow: hidden;
 }
 
 .logo-container {
     display: inline-block;
-    width: 400px;
+    width: 330px;
     height: 100%;
     border-right: 3px solid white;
 }
@@ -24,7 +24,7 @@
 .about-container {
     position: relative;
     display: inline-block;
-    width: 220px;
+    width: 180px;
     height: 100%;
 }
 

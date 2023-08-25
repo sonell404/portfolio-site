@@ -2,23 +2,29 @@ import HeaderContainer from "./HEADER/HeaderContainer";
 import ImageGallery from "./GALLERY/ImageGallery";
 
 function HandDrawnWork() {
-  // Function to get filenames from folder
-  function getFilenamesFromFolder(folderPath: string): string[] {
-    const context = require.context(folderPath, false, /\.(png|jpe?g|svg)$/);
-    const filenames = context
-      .keys()
-      .map((key) => key.replace("./", ""))
-      .filter((filename) => filename.includes("DRAWN"));
-    return filenames;
-  }
 
-  // Create array of image URLs
-  const images = getFilenamesFromFolder("../assets/images/");
+  const imageList = import.meta.glob('../assets/images/*.png');
+
+  // Convert imageList to string array
+  const imageListString = Object.keys(imageList).map((key) => {
+    return imageList[key].toString();
+  });
+
+  
+
+  //Create array of image URLs
+  // const images = [
+  //   "src/assets/images/DRAWN-1.png",
+  //   "src/assets/images/DRAWN-2.png",
+  //   "src/assets/images/DRAWN-3.png",
+  //   "src/assets/images/DRAWN-4.png",
+  //   "src/assets/images/DRAWN-5.png"
+  // ];
 
   return (
     <>
-      <HeaderContainer />
-      <ImageGallery images={images} />
+      <HeaderContainer menuOpen={true} />
+      <ImageGallery images={imageListString} />
     </>
   );
 }

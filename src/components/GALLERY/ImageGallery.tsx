@@ -1,7 +1,3 @@
-// Component for gallery to display images in a grid format
-
-import React from "react";
-
 import "./ImageGallery.css";
 
 interface ImageGalleryProps {
@@ -10,14 +6,16 @@ interface ImageGalleryProps {
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
   return (
-    <div className="image-gallery">
-      {images.map((image, index) => (
-        <img
-          className="image-gallery__image"
-          src={image}
-          alt={`image-${index}`}
-        />
-      ))}
+    <div className="image-gallery-container">
+      <div className="image-gallery">
+        {images.map((image, index) => (
+          <img
+            className="image-gallery__image"
+            src={image}
+            alt={`image-${index}`}
+          />
+        ))}
+      </div>
     </div>
   );
 };
