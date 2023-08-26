@@ -2,16 +2,18 @@ import HeaderContainer from "./HEADER/HeaderContainer";
 import ImageGallery from "./GALLERY/ImageGallery";
 
 function HandDrawnWork() {
+//   async function fetchPngFileUrls(): Promise<string[]> {
+//     const response = await fetch("../assets/images/");
+//     const data = await response.json();
 
-  const imageList = import.meta.glob('../assets/images/*.png');
+//     // Filter the response to include only PNG file URLs
+//     const imageList = data.filter((url: string) => url.endsWith(".png")) as string[];
 
-  // Convert imageList to string array
-  const imageListString = Object.keys(imageList).map((key) => {
-    return imageList[key].toString();
-  });
+//     return imageList;
+//   }
 
-  
 
+// const images = await fetchPngFileUrls();
   //Create array of image URLs
   // const images = [
   //   "src/assets/images/DRAWN-1.png",
@@ -21,10 +23,14 @@ function HandDrawnWork() {
   //   "src/assets/images/DRAWN-5.png"
   // ];
 
+  const images = import.meta.globEager("../assets/images/*.png");
+  //convert Record<string, unknown> to string[]
+  const imageList = Object.values(images) as string[];
+
   return (
     <>
       <HeaderContainer menuOpen={true} />
-      <ImageGallery images={imageListString} />
+      <ImageGallery images={imageList} />
     </>
   );
 }

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 interface MenuButtonProps {
   onClick?: () => void;
   className?: string;
-  ref?: React.RefObject<HTMLButtonElement>;
+  ref?: React.Ref<HTMLButtonElement> | null | undefined;
 }
 
 const MenuButton: React.FC<MenuButtonProps> = ({ onClick, className }) => {
