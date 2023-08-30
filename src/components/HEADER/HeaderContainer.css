@@ -1,6 +1,6 @@
 .menu {
   position: relative;
-  border: 3px solid white;
+  border: 3px solid var(--clr-secondary);
   border-radius: 0 0 var(--br-size) var(--br-size);
   width: 333px;
   height: 70vh;
@@ -26,12 +26,47 @@
 
 }
 .menu > ul > li:hover {
-  outline: 3px solid white;
+  outline: 3px solid var(--clr-secondary);
   border-radius: 1.8rem;
 }
 .menu > ul > li > a > div > div > svg {
   height: 110px;
 }
+
+/*----------------------*/
+/* SVG MENU ICONS START */
+
+/* GITHUB, PHONE ICONS */
+.menu > ul > li > a > .menu-item__active > div > svg > * {
+  stroke: var(--clr-main);
+}
+/* PRINT, INSTA, MAIL ICONS */
+.menu > ul > li > a > .menu-item__active > div > svg > g > path {
+  stroke: var(--clr-main);
+}
+.menu > ul > li > a > .menu-item__active > div > svg > g > circle {
+  stroke: var(--clr-main);
+}
+/* HAND DRAWN ICON */
+.menu > ul > .active > a > .menu-item__active > div > svg > g > path {
+  stroke: var(--clr-main);
+}
+.menu > ul > .active > a > .menu-item__active > div > svg > g > g > path {
+  stroke: var(--clr-main);
+}
+
+/* SVG MENU ICONS END */
+/*--------------------*/
+
+.menu > ul > .active {
+  background-color: var(--clr-secondary);
+  border-radius: var(--br-size);
+  transition: background-color 0.5s ease;
+}
+.menu > ul > .active > a > div > div > svg > path {
+  stroke: black;
+}
+
 
 .menu-button-container {
   display: flex;
@@ -39,7 +74,7 @@
   align-items: center;
   width: 333px;
   padding: 0.5rem;
-  background-color: white;
+  background-color: var(--clr-secondary);
   border-radius: 0 0 var(--br-size) var(--br-size);
   transition: border-radius 0.3s ease;
 }
@@ -63,7 +98,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  outline: 3px solid white;
+  outline: 3px solid var(--clr-secondary);
   border-radius: 0 0 var(--br-size) var(--br-size);
   width: 100%;
   height: var(--size-700);

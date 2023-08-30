@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef, Ref } from "react";
 
 interface MenuButtonProps {
   onClick?: () => void;
   className?: string;
-  ref?: React.Ref<HTMLButtonElement> | null | undefined;
 }
 
-const MenuButton: React.FC<MenuButtonProps> = ({ onClick, className }) => {
+// eslint-disable-next-line react-refresh/only-export-components
+const MenuButton: React.ForwardRefRenderFunction<HTMLButtonElement, MenuButtonProps> = (
+  { onClick, className },
+  ref: Ref<HTMLButtonElement>
+) => {
   const [isRotated, setIsRotated] = useState(false);
 
   const handleClick = () => {
@@ -16,7 +19,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ onClick, className }) => {
 
   return (
     <>
-      <button className={`${className} ${isRotated ? "rotate" : ""}`} onClick={handleClick}>
+      <button ref={ref} className={`${className} ${isRotated ? "rotate" : ""}`} onClick={handleClick}>
         <img
           src="src/assets/icons/menu-button.svg"
           alt="menu"
@@ -26,4 +29,5 @@ const MenuButton: React.FC<MenuButtonProps> = ({ onClick, className }) => {
   );
 };
 
-export default MenuButton;
+// eslint-disable-next-line react-refresh/only-export-components
+export default forwardRef(MenuButton);

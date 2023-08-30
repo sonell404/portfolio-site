@@ -16,7 +16,14 @@
 }
 
 .image-gallery__image {
-  max-width: 280px;
+  max-width: var(--size-1450);
   border-radius: var(--br-size);
+  margin: var(--size-300);
+}
+
+.image-gallery__image_outline {
+  border: 3px solid white;
+  border-radius: var(--br-size);
+  max-width: var(--size-1450);
   margin: var(--size-300);
 }

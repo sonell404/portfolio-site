@@ -2,15 +2,16 @@ import "./ImageGallery.css";
 
 interface ImageGalleryProps {
   images: string[];
+  hasOutline?: boolean;
 }
 
-const ImageGallery = ({ images }: ImageGalleryProps) => {
+const ImageGallery = ({ images, hasOutline }: ImageGalleryProps) => {
   return (
     <div className="image-gallery-container">
       <div className="image-gallery">
         {images.map((image, index) => (
           <img
-            className="image-gallery__image"
+            className={hasOutline ? "image-gallery__image_outline" : "image-gallery__image"}
             src={image}
             alt={`image-${index}`}
           />
