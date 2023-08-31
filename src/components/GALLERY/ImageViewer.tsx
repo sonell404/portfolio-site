@@ -1,8 +1,4 @@
-import React, { useState } from "react";
-import { ReactSVG } from "react-svg";
-
-import PreviousButton from "../../assets/icons/previous-button.svg"
-import NextButton from "../../assets/icons/next-button.svg"
+import { useState } from "react";
 
 import "./ImageViewer.css";
 

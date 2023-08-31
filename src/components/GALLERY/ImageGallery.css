@@ -21,6 +21,11 @@
   max-width: var(--size-1450);
   border-radius: var(--br-size);
   margin: var(--size-300);
+  transition: transform 0.12s ease-in 0s;
+}
+.image-gallery__image:hover {
+  cursor: pointer;
+  transform: scale(0.97);
 }
 
 .image-gallery__image_outline {
@@ -28,4 +33,12 @@
   border-radius: var(--br-size);
   max-width: var(--size-1450);
   margin: var(--size-300);
+}
+
+.image-viewer__close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

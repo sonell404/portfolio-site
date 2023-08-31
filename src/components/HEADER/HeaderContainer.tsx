@@ -1,9 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
 import MainHeader from "./MainHeader";
-import "./HeaderContainer.css";
 import MenuButtonContainer from "../MENU/MenuButtonContainer";
 import MenuButton from "../MENU/MenuButton";
 import Menu from "../MENU/Menu";
+
+import "./HeaderContainer.css";
 
 interface HeaderContainerProps {
   menuOpen?: boolean;
@@ -14,6 +16,13 @@ const HeaderContainer: React.FC<HeaderContainerProps> = ({ menuOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(menuOpen || false);
   const [borderRadius, setBorderRadius] = useState(withBorderRadius);
   const menuButtonRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    const menu = document.querySelector(".menu");
+    if (menu) {
+      menu.classList.toggle("open", isMenuOpen);
+    }
+  }, [isMenuOpen]);
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);

@@ -1,3 +1,7 @@
+.menu-container {
+  overflow: hidden;
+}
+
 .menu {
   position: relative;
   border: 3px solid var(--clr-secondary);
@@ -6,6 +10,14 @@
   height: 70vh;
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.1s ease;
+  transform: translateY(-100%); /* Initial position off-screen */
+}
+
+.menu.open {
+  opacity: 1;
+  transform: translateY(0); /* Slide the menu into view */
 }
 .menu > ul {
   display: flex;
@@ -77,6 +89,7 @@
   background-color: var(--clr-secondary);
   border-radius: 0 0 var(--br-size) var(--br-size);
   transition: border-radius 0.3s ease;
+  z-index: 9990;
 }
 .menu-button {
   width: 2rem;
@@ -84,6 +97,7 @@
   margin: 0;
   padding: 0;
   transition: transform 0.3s ease;
+  z-index: 9991;
 }
 .menu-button.rotate {
   transform: rotate(45deg);
@@ -104,4 +118,5 @@
   height: var(--size-700);
   bottom: 0;
   transition: background-color 0.5s ease;
+  z-index: 9989;
 }

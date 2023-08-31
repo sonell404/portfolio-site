@@ -26,83 +26,85 @@ const Menu: React.FC<MenuProps> = ({ isOpen, className }) => {
   };
   return (
     <>
-      <div
-        className={className}
-        style={{ display: isOpen ? "block" : "none" }}
-        onMouseEnter={() => setHasText(true)}
-        onMouseLeave={() => setHasText(false)}
-      >
-        <ul>
-          <li
-            className={currentUrl.includes("hand-drawn-work") ? "active" : ""}
-            onMouseEnter={() => setHoveredItem("HAND DRAWN")}
-            onMouseLeave={() => setHoveredItem("")}
-          >
-            <Link to="/hand-drawn-work">
-              <ReactSVG
-                className={
-                  currentUrl.includes("hand-drawn-work")
-                    ? "menu-item__active"
-                    : "menu-item"
-                }
-                src={HandDrawnIcon}
-              />
-            </Link>
-          </li>
-          <li
-            className={currentUrl.includes("print-work") ? "active" : ""}
-            onMouseEnter={() => setHoveredItem("PRINT")}
-            onMouseLeave={() => setHoveredItem("")}
-          >
-            <Link to="/print-work">
-              <ReactSVG
-                className={
-                  currentUrl.includes("print-work")
-                    ? "menu-item__active"
-                    : "menu-item"
-                }
-                src={PrintIcon}
-              />
-            </Link>
-          </li>
-          <li
-            onMouseEnter={() => setHoveredItem("INSTAGRAM")}
-            onMouseLeave={() => setHoveredItem("")}
-          >
-            <Link to="https://www.instagram.com/son__l/" target="_blank">
-              <ReactSVG className="menu-item" src={InstagramIcon} />
-            </Link>
-          </li>
-          <li
-            onMouseEnter={() => setHoveredItem("GITHUB")}
-            onMouseLeave={() => setHoveredItem("")}
-          >
-            <Link to="https://github.com/sonell404" target="_blank">
-              <ReactSVG className="menu-item" src={GithubIcon} />
-            </Link>
-          </li>
-          <li
-            onMouseEnter={() => setHoveredItem("MAIL")}
-            onMouseLeave={() => setHoveredItem("")}
-          >
-            <Link to="/print-work">
-              <ReactSVG className="menu-item" src={MailIcon} />
-            </Link>
-          </li>
-          <li
-            onMouseEnter={() => setHoveredItem("PHONE")}
-            onMouseLeave={() => setHoveredItem("")}
-          >
-            <Link to="/print-work">
-              <ReactSVG className="menu-item" src={PhoneIcon} />
-            </Link>
-          </li>
-        </ul>
+      <div className="menu-container">
         <div
-          className="menu-footer"
-          style={{ backgroundColor: hasText ? "transparent" : "white" }}
+          className={className}
+          // style={{ display: isOpen ? "block" : "none" }}
+          onMouseEnter={() => setHasText(true)}
+          onMouseLeave={() => setHasText(false)}
         >
-          <p>{hoveredItem}</p>
+          <ul>
+            <li
+              className={currentUrl.includes("hand-drawn-work") ? "active" : ""}
+              onMouseEnter={() => setHoveredItem("HAND DRAWN")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              <Link to="/hand-drawn-work">
+                <ReactSVG
+                  className={
+                    currentUrl.includes("hand-drawn-work")
+                      ? "menu-item__active"
+                      : "menu-item"
+                  }
+                  src={HandDrawnIcon}
+                />
+              </Link>
+            </li>
+            <li
+              className={currentUrl.includes("print-work") ? "active" : ""}
+              onMouseEnter={() => setHoveredItem("PRINT")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              <Link to="/print-work">
+                <ReactSVG
+                  className={
+                    currentUrl.includes("print-work")
+                      ? "menu-item__active"
+                      : "menu-item"
+                  }
+                  src={PrintIcon}
+                />
+              </Link>
+            </li>
+            <li
+              onMouseEnter={() => setHoveredItem("INSTAGRAM")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              <Link to="https://www.instagram.com/son__l/" target="_blank">
+                <ReactSVG className="menu-item" src={InstagramIcon} />
+              </Link>
+            </li>
+            <li
+              onMouseEnter={() => setHoveredItem("GITHUB")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              <Link to="https://github.com/sonell404" target="_blank">
+                <ReactSVG className="menu-item" src={GithubIcon} />
+              </Link>
+            </li>
+            <li
+              onMouseEnter={() => setHoveredItem("MAIL")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              <Link to="/print-work">
+                <ReactSVG className="menu-item" src={MailIcon} />
+              </Link>
+            </li>
+            <li
+              onMouseEnter={() => setHoveredItem("PHONE")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              <Link to="/print-work">
+                <ReactSVG className="menu-item" src={PhoneIcon} />
+              </Link>
+            </li>
+          </ul>
+          <div
+            className="menu-footer"
+            style={{ backgroundColor: hasText ? "transparent" : "white" }}
+          >
+            <p>{hoveredItem}</p>
+          </div>
         </div>
       </div>
     </>
