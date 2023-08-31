@@ -1,11 +1,7 @@
 import AboutText from "./AboutText";
 
 function About() {
-  return (
-    <>
-      <AboutText />
-    </>
-  );
+  return <AboutText />;
 }
 
 export default About;

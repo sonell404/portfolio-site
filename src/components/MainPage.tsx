@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./About";
-import HandDrawnWork from "./HandDrawnWork";
-import PrintWork from "./PrintWork";
+
+import Home from "./PAGES/Home";
+import About from "./HEADER/About";
+import HandDrawnWork from "./PAGES/HandDrawnWork";
+import PrintWork from "./PAGES/PrintWork";
 import HeaderContainer from "./HEADER/HeaderContainer";
-import Home from "./Home";
 
 function MainPage() {
   return (

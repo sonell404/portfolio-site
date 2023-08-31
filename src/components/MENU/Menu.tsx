@@ -20,7 +20,6 @@ const Menu: React.FC<MenuProps> = ({ isOpen, className }) => {
 
   const [hoveredItem, setHoveredItemState] = useState("");
   const [hasText, setHasText] = useState(false);
-  const [strokeColour, setStrokeColour] = useState("#212121");
 
   const setHoveredItem = (text: string) => {
     setHoveredItemState(text);

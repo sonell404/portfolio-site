@@ -1,8 +1,8 @@
-import ImageGallery from "./GALLERY/ImageGallery";
+import ImageGallery from "../GALLERY/ImageGallery";
 
 function PrintWork() {
   const gallery = Object.values(
-    import.meta.glob("../assets/images/*.{png,jpg,jpeg,PNG,JPEG}", {
+    import.meta.glob("../../assets/images/*.{png,jpg,jpeg,PNG,JPEG}", {
       eager: true,
       as: "url",
     })
