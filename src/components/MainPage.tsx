@@ -5,6 +5,7 @@ import About from "./HEADER/About";
 import HandDrawnWork from "./PAGES/HandDrawnWork";
 import PrintWork from "./PAGES/PrintWork";
 import HeaderContainer from "./HEADER/HeaderContainer";
+import Footer from "./FOOTER/Footer";
 
 function MainPage() {
   return (
@@ -18,6 +19,7 @@ function MainPage() {
           <Route path="/print-work" element={<PrintWork />}></Route>
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }
