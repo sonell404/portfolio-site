@@ -10,11 +10,11 @@ import MailIcon from "../../assets/icons/mail-icon.svg";
 import PhoneIcon from "../../assets/icons/phone-icon.svg";
 
 interface MenuProps {
-  isOpen: boolean;
+  isOpen?: boolean;
   className?: string;
 }
 
-const Menu: React.FC<MenuProps> = ({ isOpen, className }) => {
+const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
   const location = useLocation();
   const currentUrl = location.pathname;
 
@@ -26,7 +26,7 @@ const Menu: React.FC<MenuProps> = ({ isOpen, className }) => {
   };
   return (
     <>
-      <div className="menu-container">
+      <div className={isOpen ? "menu-container open" : "menu-container"}>
         <div
           className={className}
           // style={{ display: isOpen ? "block" : "none" }}
@@ -99,12 +99,12 @@ const Menu: React.FC<MenuProps> = ({ isOpen, className }) => {
               </Link>
             </li>
           </ul>
-          <div
-            className="menu-footer"
-            style={{ backgroundColor: hasText ? "transparent" : "white" }}
-          >
-            <p>{hoveredItem}</p>
-          </div>
+        </div>
+        <div
+          className="menu-footer"
+          style={{ backgroundColor: hasText ? "transparent" : "white" }}
+        >
+          <p>{hoveredItem}</p>
         </div>
       </div>
     </>
