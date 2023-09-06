@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ReactSVG } from "react-svg";
 import { Link } from "react-router-dom";
 
@@ -14,6 +14,13 @@ const MainHeader = () => {
     setShowAbout(!showAbout);
     setFillColour(fillColour === "#212121" ? "#ffffff" : "#212121");
   };
+
+  // Set fill colour of about logo to #212121 when the user leaves the page
+  useEffect(() => {
+    return () => {
+      setFillColour("#212121");
+    };
+  } ,[]);
 
   return (
     <header className="main-header">

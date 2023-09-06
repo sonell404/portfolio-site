@@ -1,0 +1,148 @@
+.menu-container {
+  position: relative;
+  height: 0;
+  opacity: 0;
+}
+.menu-container.open {
+  height: min-content;
+  width: 333px;
+  border: 3px solid var(--clr-secondary);
+  border-radius: 0 0 var(--br-size) var(--br-size);
+  opacity: 1;
+}
+@media (max-width: 664px) {
+  .menu-container.open {
+    width: 100%;
+    border-radius: 0 0 var(--br-size) var(--br-size);
+  }
+}
+
+.menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  position: relative;
+  width: 333px;
+  transition: grid-template-rows 0.3s ease-out;
+}
+.menu > ul {
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+.menu > ul > li {
+  display: none;
+}
+.menu > ul > li:hover {
+  outline: 3px solid var(--clr-secondary);
+  border-radius: 1.8rem;
+}
+.menu > ul > li > a > div > div > svg {
+  height: 110px;
+}
+
+.menu.open {
+  grid-template-rows: 1fr;
+  margin-bottom: var(--size-850);
+}
+.menu.open > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  width: 90%;
+  margin-top: var(--size-500);
+  overflow: hidden;
+}
+.menu.open > ul > li {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  padding: 0.7rem;
+  transition: border-radius 0.5s ease;
+}
+
+.menu-footer {
+  background-color: transparent;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  font-size: var(--fs-700);
+  font-weight: var(--fw-black);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  outline: 3px solid var(--clr-secondary);
+  border-radius: 0 0 var(--br-size) var(--br-size);
+  width: 100%;
+  height: var(--size-700);
+  transition: background-color 0.5s ease;
+}
+
+/*----------------------*/
+/* SVG MENU ICONS START */
+
+/* GITHUB, PHONE ICONS */
+.menu > ul > li > a > .menu-item__active > div > svg > * {
+  stroke: var(--clr-main);
+}
+/* PRINT, INSTA, MAIL ICONS */
+.menu > ul > li > a > .menu-item__active > div > svg > g > path {
+  stroke: var(--clr-main);
+}
+.menu > ul > li > a > .menu-item__active > div > svg > g > circle {
+  stroke: var(--clr-main);
+}
+/* HAND DRAWN ICON */
+.menu > ul > .active > a > .menu-item__active > div > svg > g > path {
+  stroke: var(--clr-main);
+}
+.menu > ul > .active > a > .menu-item__active > div > svg > g > g > path {
+  stroke: var(--clr-main);
+}
+
+/* MENU ITEM ACTIVE */
+.menu > ul > .active {
+  background-color: var(--clr-secondary);
+  border-radius: var(--br-size);
+  transition: background-color 0.5s ease;
+}
+.menu > ul > .active > a > div > div > svg > path {
+  stroke: black;
+}
+
+/* SVG MENU ICONS END */
+/*--------------------*/
+
+/* MENU OPEN BUTTON START */
+/* ---------------------- */
+
+.menu-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 333px;
+  padding: 0.5rem;
+  background-color: var(--clr-secondary);
+  border-radius: 0 0 var(--br-size) var(--br-size);
+  transition: border-radius 0.1s ease;
+  z-index: 9990;
+}
+@media (max-width: 664px) {
+  .menu-button-container {
+    width: 100%;
+  }
+}
+.menu-button {
+  width: 2rem;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+  z-index: 9991;
+}
+.menu-button.rotate {
+  transform: rotate(45deg);
+}
+
+/* MENU OPEN BUTTON END */
+/* -------------------- */

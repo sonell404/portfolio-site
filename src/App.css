@@ -45,13 +45,6 @@
   --br-size: 1.8rem;
 }
 
-@media (min-width: 47em) {
-  :root {
-    --fs-body: var(--fs-900);
-    --fs-menu-text: var(--fs-400);
-  }
-}
-
 /*
   Use a more-intuitive box-sizing model.
 */
@@ -201,4 +194,19 @@ body {
 
 .app {
   position: relative;
+}
+
+@media (max-width: 664px) {
+  #root {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    gap: 0.5rem;
+    height: 100vh;
+    width: 52vw;
+    margin: 0 auto;
+  }
+  html,
+  body {
+    height: min-content;
+  }
 }

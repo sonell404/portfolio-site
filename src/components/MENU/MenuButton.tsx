@@ -1,5 +1,7 @@
 import React, { useState, forwardRef, Ref } from "react";
 
+import "./Menu.css";
+
 interface MenuButtonProps {
   onClick?: () => void;
   className?: string;

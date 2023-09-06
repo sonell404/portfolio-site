@@ -1,0 +1,34 @@
+.footer-container {
+  display: none;
+}
+@media (max-width: 664px) {
+  .footer-container {
+    grid-row: 3;
+    display: flex;
+    width: 100%;
+    border-radius: var(--br-size) var(--br-size) var(--br-size) var(--br-size);
+    border: 3px solid var(--clr-secondary);
+    overflow: hidden;
+  }
+
+  .footer-about-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+  }
+  .about-footer {
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    stroke: var(--clr-secondary);
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+  }
+  .about-footer > div > svg {
+    position: relative;
+    height: 13rem;
+    top: 10%;
+    left: 25%;
+  }
+}

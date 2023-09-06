@@ -9,6 +9,8 @@ import GithubIcon from "../../assets/icons/github-icon.svg";
 import MailIcon from "../../assets/icons/mail-icon.svg";
 import PhoneIcon from "../../assets/icons/phone-icon.svg";
 
+import "./Menu.css";
+
 interface MenuProps {
   isOpen?: boolean;
   className?: string;

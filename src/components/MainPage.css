@@ -1,0 +1,5 @@
+@media (max-width: 664px) {
+    .main-component-container {
+        grid-row: 2;
+    }
+}

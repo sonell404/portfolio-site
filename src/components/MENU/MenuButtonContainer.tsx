@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Menu.css";
+
 interface MenuButtonContainerProps {
   className?: string;
   children?: React.ReactNode;
