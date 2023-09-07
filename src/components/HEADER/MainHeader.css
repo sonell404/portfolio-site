@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     border: 3px solid var(--clr-secondary);
-    height: 166px;
+    height: min-content;
     border-radius: var(--br-size) var(--br-size) var(--br-size) 0;
     padding-right: 5%;
     overflow: hidden;
@@ -47,8 +47,7 @@
 .about {
     position: absolute;
     width: 95%;
-    height: auto;
-    top: -10%;
+    top: -10px;
     stroke: var(--clr-secondary);
     stroke-width: 4;
     stroke-miterlimit: 10;
