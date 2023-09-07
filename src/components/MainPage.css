@@ -1,5 +1,12 @@
 @media (max-width: 664px) {
     .main-component-container {
+        display: none;
+    }
+    .main-component-container.active {
         grid-row: 2;
+        display: grid;
+        /* Center contents */
+        justify-content: center;
+        align-items: center;
     }
 }

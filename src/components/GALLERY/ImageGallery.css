@@ -59,6 +59,11 @@
   margin: var(--size-300);
   transition: transform 0.12s ease-in 0s;
 }
+@media (max-width: 664px) {
+  .image-gallery__image_outline {
+    max-width: 100%;
+  }
+}
 .image-gallery__image_outline:hover {
   cursor: pointer;
   transform: scale(0.97);

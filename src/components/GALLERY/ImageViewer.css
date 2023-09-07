@@ -33,8 +33,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: var(--img-size-l);
-  height: var(--img-size-l);
   border-radius: var(--br-size);
+}
+@media (max-width: 664px) {
+  .image-viewer__image_active {
+    width: var(--img-size-m);
+  }
 }
 .image-viewer__image_hidden {
   display: none;
@@ -74,7 +78,7 @@
   cursor: pointer;
 }
 
-/* Create a circle shape with css */
+/* NAVIGATION CIRCLES */
 .circle {
   position: fixed;
   width: 25px;
