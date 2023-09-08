@@ -1,8 +1,8 @@
 .image-gallery-container {
-  position: absolute;
+  /* position: absolute;
   top: var(--size-1150);
   z-index: 9999;
-  margin-left: 345px;
+  margin-left: 345px; */
 }
 @media (max-width: 664px) {
   .image-gallery-container {

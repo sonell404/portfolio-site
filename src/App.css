@@ -73,6 +73,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
   padding: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 /*
@@ -198,6 +199,14 @@ body {
 
 .app {
   position: relative;
+}
+
+#root {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 333px calc(100% - 333px);
+  grid-template-rows: 168px calc(100% - 168px);
+  width: 100%;
 }
 
 @media (max-width: 664px) {

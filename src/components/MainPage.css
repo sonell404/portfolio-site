@@ -1,3 +1,7 @@
+.main-component-container, .main-component-container.active {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
 @media (max-width: 664px) {
     .main-component-container {
         display: none;
