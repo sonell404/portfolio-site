@@ -1,5 +1,6 @@
 .main-component-container, .main-component-container.active {
     grid-area: 2 / 2 / 3 / 3;
+    width: 100%;
 }
 
 @media (max-width: 664px) {
@@ -7,6 +8,7 @@
         display: none;
     }
     .main-component-container.active {
+        grid-area: unset;
         grid-row: 2;
         display: grid;
         /* Center contents */

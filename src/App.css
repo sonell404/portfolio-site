@@ -193,7 +193,6 @@ body {
   background-color: var(--clr-main);
   color: var(--clr-secondary);
   font-family: var(--ff-body);
-  font-size: var(--fs-body);
   font-weight: var(--fw-bold);
 }
 
@@ -204,8 +203,8 @@ body {
 #root {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 333px calc(100% - 333px);
-  grid-template-rows: 168px calc(100% - 168px);
+  grid-template-columns: 333px auto;
+  grid-template-rows: 168px auto;
   width: 100%;
 }
 
@@ -215,7 +214,7 @@ body {
     grid-template-rows: min-content auto min-content;
     gap: 0.5rem;
     height: 97vh;
-    width: 52vw;
+    width: min-content;
     margin: 0 auto;
   }
   html,
