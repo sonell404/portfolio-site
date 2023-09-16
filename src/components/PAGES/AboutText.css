@@ -10,6 +10,12 @@
   justify-content: flex-end;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .about-text-container {
+    align-items: flex-start;
+    margin-top: 3rem;
+  }
+}
 .about-text {
   text-align: right;
   padding-right: 4rem;
@@ -19,6 +25,11 @@
   .about-text {
     padding-right: 1rem;
     font-size: 4.5vw;
+  }
+}
+@media (max-width: 768px) {
+  .about-text {
+    padding-right: 0;
   }
 }
 @media (max-width: 664px) {

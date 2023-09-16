@@ -1,18 +1,126 @@
-.main-component-container, .main-component-container.active {
-    grid-area: 2 / 2 / 3 / 3;
-    width: 100%;
+.main-component-container,
+.main-component-container.active {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 100%;
 }
 
 @media (max-width: 664px) {
-    .main-component-container {
-        display: none;
-    }
-    .main-component-container.active {
-        grid-area: unset;
-        grid-row: 2;
-        display: grid;
-        /* Center contents */
-        justify-content: center;
-        align-items: center;
-    }
+  .main-component-container {
+    display: none;
+  }
+  .main-component-container.active {
+    grid-area: unset;
+    grid-row: 2;
+    display: grid;
+    /* Center contents */
+    justify-content: center;
+    align-items: center;
+  }
 }
+
+/* ------------------------ */
+/* MAIN HEADER STYLES START */
+
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid var(--clr-secondary);
+  height: min-content;
+  border-radius: var(--br-size) var(--br-size) var(--br-size) 0;
+  padding-right: 5%;
+  overflow: hidden;
+}
+@media (max-width: 664px) {
+  .main-header {
+    width: 100%;
+    padding-right: 0;
+    border-radius: var(--br-size) var(--br-size) 0 0;
+  }
+}
+
+.logo-container {
+  width: 330px;
+  height: 100%;
+  border-right: 3px solid var(--clr-secondary);
+}
+@media (max-width: 664px) {
+  .logo-container {
+    width: max-content;
+    border-right: none;
+  }
+}
+
+.logo {
+  width: 330px;
+}
+
+.about-container {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 100%;
+}
+@media (max-width: 664px) {
+  .about-container {
+    display: none;
+  }
+}
+
+.about {
+  position: absolute;
+  width: 95%;
+  top: -10px;
+  stroke: var(--clr-secondary);
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+@media (max-width: 664px) {
+  .about {
+    display: none;
+  }
+}
+
+/* ---------------------- */
+/* MAIN HEADER STYLES END */
+
+/* ------------------------ */
+/* MAIN FOOTER STYLES START */
+
+.footer-container {
+  display: none;
+}
+@media (max-width: 664px) {
+  .footer-container {
+    grid-row: 3;
+    display: flex;
+    width: 100%;
+    border-radius: var(--br-size) var(--br-size) var(--br-size) var(--br-size);
+    border: 3px solid var(--clr-secondary);
+    overflow: hidden;
+  }
+
+  .footer-about-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 10rem;
+  }
+  .about-footer {
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    stroke: var(--clr-secondary);
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+  }
+  .about-footer > div > svg {
+    position: relative;
+    height: 13rem;
+    top: 10%;
+    left: 25%;
+  }
+}
+
+/* MAIN FOOTER STYLES END */
+/* ---------------------- */

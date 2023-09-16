@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import MainHeader from "./MainHeader";
 import MenuButtonContainer from "../MENU/MenuButtonContainer";
 import MenuButton from "../MENU/MenuButton";
 import Menu from "../MENU/Menu";
@@ -9,9 +8,10 @@ import "./HeaderContainer.css";
 
 interface HeaderContainerProps {
   menuOpen?: boolean;
+  children?: React.ReactNode;
 }
 
-const HeaderContainer: React.FC<HeaderContainerProps> = ({ menuOpen }) => {
+const HeaderContainer: React.FC<HeaderContainerProps> = ({ menuOpen, children }) => {
   const withBorderRadius = "0 0 1.8rem 1.8rem";
   const [isMenuOpen, setIsMenuOpen] = useState(menuOpen || false);
   const [borderRadius, setBorderRadius] = useState(withBorderRadius);
@@ -34,7 +34,7 @@ const HeaderContainer: React.FC<HeaderContainerProps> = ({ menuOpen }) => {
 
   return (
     <div className="header-container">
-      <MainHeader />
+      {children}
       <MenuButtonContainer
         className="menu-button-container"
         style={{ borderRadius }}

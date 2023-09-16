@@ -21,6 +21,7 @@
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
+  --size-250: 0.6rem;
   --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.5rem;
@@ -40,6 +41,7 @@
 
   --img-size-l: 35rem;
   --img-size-m: 25rem;
+  --image-default-size: var(--img-size-l);
 
   --fs-menu-text: var(--fs-700);
 
@@ -47,6 +49,11 @@
 
   --fs-body: var(--fs-900);
   --fs-body-mobile: var(--fs-700);
+}
+@media (max-width: 664px) {
+  :root {
+    --image-default-size: var(--img-size-m);
+  }
 }
 
 /*
@@ -202,7 +209,7 @@ body {
 
 #root {
   display: grid;
-  gap: 1rem;
+  gap: .5rem;
   grid-template-columns: 333px auto;
   grid-template-rows: 168px auto;
   width: 100%;

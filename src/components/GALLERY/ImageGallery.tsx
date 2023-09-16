@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 
 import "./ImageGallery.css";
 import ImageViewer from "./ImageViewer";
@@ -10,31 +10,17 @@ interface ImageGalleryProps {
 }
 
 const ImageGallery = ({ images, hasOutline, className }: ImageGalleryProps) => {
+  const [imageViewerIsOpen, setImageViewerIsOpen] = useState<boolean>(false);
   const [imageIndex, setImageIndex] = useState<number>(0);
-  const [isImageViewerOpen, setIsImageViewerOpen] = useState<boolean>(false);
-  const imageViewerRef = useRef<HTMLDivElement>(null);
 
   const handleImageClick = (index: number) => {
+    setImageViewerIsOpen(true);
     setImageIndex(index);
-    setIsImageViewerOpen(true);
   };
 
-  const handleOutsideClick = (event: MouseEvent) => {
-    if (
-      imageViewerRef.current &&
-      !imageViewerRef.current.contains(event.target as Node)
-    ) {
-      setIsImageViewerOpen(false);
-    }
+  const handleImageViewerIsOpen = (isOpen: boolean) => {
+    setImageViewerIsOpen(isOpen);
   };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, []);
 
   return (
     <>
@@ -55,15 +41,7 @@ const ImageGallery = ({ images, hasOutline, className }: ImageGalleryProps) => {
           ))}
         </div>
       </div>
-      {isImageViewerOpen && (
-        <div ref={imageViewerRef}>
-          <ImageViewer
-            images={images}
-            index={imageIndex}
-            className="image-viewer__active"
-          />
-        </div>
-      )}
+      {imageViewerIsOpen && <ImageViewer images={images} index={imageIndex} isOpen={handleImageViewerIsOpen} />}
     </>
   );
 };
