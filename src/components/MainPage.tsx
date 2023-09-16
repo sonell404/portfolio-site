@@ -11,13 +11,14 @@ import "./MainPage.css";
 import AboutLogo from "./HEADER/AboutLogo";
 import MainHeader from "./HEADER/MainHeader";
 import MainLogo from "./HEADER/MainLogo";
+import MenuContainer from "./MENU/MenuContainer";
 
 function MainPage() {
   const location = useLocation();
 
   return (
     <>
-      <HeaderContainer menuOpen={false}>
+      <HeaderContainer>
         <MainHeader>
           <MainLogo />
           <AboutLogo
@@ -26,6 +27,7 @@ function MainPage() {
           />
         </MainHeader>
       </HeaderContainer>
+      <MenuContainer />
       <div
         className={`main-component-container ${
           useLocation().pathname !== "/" ? "active" : ""

@@ -8,5 +8,6 @@
         grid-area: unset;
         grid-row: 1;
         width: 100%;
+        height: 100vh;
     }
 }

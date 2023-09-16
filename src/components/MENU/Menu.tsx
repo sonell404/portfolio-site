@@ -28,13 +28,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
   };
   return (
     <>
-      <div className={isOpen ? "menu-container open" : "menu-container"}>
-        <div
-          className={className}
-          // style={{ display: isOpen ? "block" : "none" }}
-          onMouseEnter={() => setHasText(true)}
-          onMouseLeave={() => setHasText(false)}
-        >
+      <div className="menu">
+        <div>
           <ul>
             <li
               className={currentUrl.includes("hand-drawn-work") ? "active" : ""}
@@ -103,11 +98,11 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
           </ul>
         </div>
         <div
-          className="menu-footer"
-          style={{ backgroundColor: hasText ? "transparent" : "white" }}
-        >
-          <p>{hoveredItem}</p>
-        </div>
+            className="menu-footer"
+            style={{ backgroundColor: hasText ? "transparent" : "white" }}
+          >
+            <p>{hoveredItem}</p>
+          </div>
       </div>
     </>
   );

@@ -26,7 +26,7 @@
   --size-400: 1rem;
   --size-500: 1.5rem;
   --size-600: 2rem;
-  --size-700: 3.3rem;
+  --size-700: 3rem;
   --size-800: 4rem;
   --size-850: 4.7rem;
   --size-900: 6rem;
@@ -209,7 +209,7 @@ body {
 
 #root {
   display: grid;
-  gap: .5rem;
+  /* gap: .5rem; */
   grid-template-columns: 333px auto;
   grid-template-rows: 168px auto;
   width: 100%;
