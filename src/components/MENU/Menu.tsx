@@ -28,7 +28,11 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
   };
   return (
     <>
-      <div className="menu">
+      <div
+        className="menu"
+        onMouseEnter={() => setHasText(true)}
+        onMouseLeave={() => setHasText(false)}
+      >
         <div>
           <ul>
             <li
@@ -98,11 +102,11 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
           </ul>
         </div>
         <div
-            className="menu-footer"
-            style={{ backgroundColor: hasText ? "transparent" : "white" }}
-          >
-            <p>{hoveredItem}</p>
-          </div>
+          className="menu-footer"
+          style={{ backgroundColor: hasText ? "transparent" : "white" }}
+        >
+          <p>{hoveredItem}</p>
+        </div>
       </div>
     </>
   );

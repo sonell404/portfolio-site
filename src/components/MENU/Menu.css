@@ -1,15 +1,22 @@
 .menu {
   position: relative;
-  border: 3px solid white;
+  border: 3px solid var(--clr-secondary);
   border-radius:  0 0 var(--br-size) var(--br-size);
   display: grid;
   grid-template-rows: 0fr;
   transform: translateY(-3.2rem);
-  transition: grid-template-rows 0.5s, transform 0.5s ease-out;
+  transition: grid-template-rows 0.3s, transform 0.3s ease-out;
 }
 
 .menu > div {
   overflow: hidden;
+}
+@media (max-width: 664px) {
+  .menu > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .menu.open {
@@ -17,86 +24,132 @@
   grid-template-rows: 1fr;
   transform: translateY(-3px);
 }
+.menu.open ul > li {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius 0.5s ease;
+}
+.menu.open ul > li:hover {
+  outline: 3px solid var(--clr-secondary);
+  border-radius: 1.8rem;
+}
+.menu-item__active {
+  background-color: var(--clr-secondary);
+  border-radius: var(--br-size);
+}
 
 .menu > div > ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: .5rem;
   justify-items: center;
   align-items: center;
-  margin: 1rem;
+  margin: var(--size-550) var(--size-400);
 }
-.menu > div > ul > li {
+@media (max-width: 664px) {
+  .menu > div > ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 2rem;
+    width: 100%;
+    margin: var(--size-650) var(--size-300);
+  }
+}
+.menu .menu-item div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu > div > ul svg {
+  width: 7.9rem;
+  height: 7.9rem;
   margin: 0.5rem;
-  width: 7rem;
+  padding: 0.2rem;
+}
+@media (max-width: 664px) {
+  .menu > div > ul svg {
+    height: 6rem;
+    margin: 0.3rem;
+  }
+}
+.menu-item__active > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-footer {
-  background-color: transparent;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-700);
+  background-color: transparent;
   outline: 3px solid var(--clr-secondary);
   border-radius: 0 0 var(--br-size) var(--br-size);
-  height: var(--size-700);
+  height: 0;
   width: 100%;
-  opacity: 0;
+  transition: all 0.3s ease;
 }
 .menu.open .menu-footer {
-  opacity: 1;
+  display: flex;
+  height: var(--size-700);
 }
 
 /*----------------------*/
 /* SVG MENU ICONS START */
 
 /* GITHUB, PHONE ICONS */
-.menu > ul > li > a > .menu-item__active > div > svg > * {
+.menu ul > li > a > .menu-item__active > div > svg > * {
   stroke: var(--clr-main);
 }
 @media (max-width: 664px) {
-  .menu > ul > li > a > .menu-item > div > svg > * {
-    stroke-width: 4px;
+  .menu ul > li > a > .menu-item > div > svg > * {
+    stroke-width: 4.5px;
   }
 }
 /* PRINT, INSTA, MAIL ICONS */
-.menu > ul > li > a > .menu-item__active > div > svg > g > path {
+.menu ul > li > a > .menu-item__active > div > svg > g > path {
   stroke: var(--clr-main);
 }
 @media (max-width: 664px) {
-  .menu > ul > li > a > .menu-item__active > div > svg > g > path {
+  .menu ul > li > a > .menu-item__active > div > svg > g > path {
     stroke-width: 4px;
   }
 }
 @media (max-width: 664px) {
-  .menu > ul > li > a > .menu-item > div > svg > g > path {
-    stroke-width: 4px;
+  .menu ul > li > a > .menu-item > div > svg > g > path {
+    stroke-width: 4.5px;
   }
 }
-.menu > ul > li > a > .menu-item__active > div > svg > g > circle {
+.menu ul > li > a > .menu-item__active > div > svg > g > circle {
   stroke: var(--clr-main);
 }
 @media (max-width: 664px) {
-  .menu > ul > li > a > .menu-item > div > svg > g > circle {
-    stroke-width: 4px;
+  .menu ul > li > a > .menu-item > div > svg > g > circle {
+    stroke-width: 4.5px;
   }
 }
 /* HAND DRAWN ICON */
-.menu > ul > .active > a > .menu-item__active > div > svg > g > path {
+.menu ul > .active > a > .menu-item__active > div > svg > g > path {
   stroke: var(--clr-main);
 }
 @media (max-width: 664px) {
-  .menu > ul > .active > a > .menu-item__active > div > svg > g > path {
+  .menu ul > .active > a > .menu-item__active > div > svg > g > path {
     stroke-width: 4px;
   }
 }
 @media (max-width: 664px) {
-  .menu > ul > .active > a > .menu-item > div > svg > g > path {
-    stroke-width: 4px;
+  .menu ul > .active > a > .menu-item > div > svg > g > path {
+    stroke-width: 4.5px;
   }
 }
-.menu > ul > .active > a > .menu-item__active > div > svg > g > g > path {
+.menu ul > .active > a > .menu-item__active > div > svg > g > g > path {
   stroke: var(--clr-main);
 }
 @media (max-width: 664px) {
-  .menu > ul > .active > a > .menu-item > div > svg > g > g > path {
-    stroke-width: 4px;
+  .menu ul > .active > a > .menu-item > div > svg > g > g > path {
+    stroke-width: 4.5px;
   }
 }
 
@@ -104,7 +157,7 @@
 .menu > ul > .active {
   background-color: var(--clr-secondary);
   border-radius: var(--br-size);
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
 }
 .menu > ul > .active > a > div > div > svg > path {
   stroke: black;

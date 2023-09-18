@@ -25,7 +25,9 @@
   --size-300: 0.75rem;
   --size-400: 1rem;
   --size-500: 1.5rem;
+  --size-550: 1.75rem;
   --size-600: 2rem;
+  --size-650: 2.25rem;
   --size-700: 3rem;
   --size-800: 4rem;
   --size-850: 4.7rem;
@@ -37,7 +39,7 @@
   --size-1250: 12.5rem;
   --size-1300: 14rem;
   --size-1400: 17rem;
-  --size-1450: 17.5rem;
+  --size-1450: 17.3rem;
 
   --img-size-l: 35rem;
   --img-size-m: 25rem;
@@ -49,6 +51,9 @@
 
   --fs-body: var(--fs-900);
   --fs-body-mobile: var(--fs-700);
+
+  --header-footer-height: 168px;
+  --header-footer-width: 333px;
 }
 @media (max-width: 664px) {
   :root {
@@ -209,24 +214,17 @@ body {
 
 #root {
   display: grid;
-  /* gap: .5rem; */
-  grid-template-columns: 333px auto;
-  grid-template-rows: 168px auto;
+  grid-template-columns: var(--header-footer-width) auto;
+  grid-template-rows: var(--header-footer-height) auto;
   width: 100%;
 }
 
 @media (max-width: 664px) {
   #root {
     display: grid;
-    grid-template-rows: min-content auto min-content;
-    gap: 0.5rem;
-    height: 97vh;
+    grid-template-rows: min-content min-content auto min-content;
     width: min-content;
+    height: 96vh;
     margin: 0 auto;
-  }
-  html,
-  body {
-    height: min-content;
-    /* font-size: var(--fs-body-mobile); */
   }
 }

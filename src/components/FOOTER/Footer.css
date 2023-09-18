@@ -3,7 +3,7 @@
 }
 @media (max-width: 664px) {
   .footer-container {
-    grid-row: 3;
+    grid-row: 4;
     display: flex;
     width: 100%;
     border-radius: var(--br-size) var(--br-size) var(--br-size) var(--br-size);

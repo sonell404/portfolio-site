@@ -31,7 +31,7 @@ const MenuContainer: React.FC<MenuContainerProps> = ({menuOpen}) => {
     }
   };
   return (
-    <div className="menu-container">
+    <div className={`menu-container ${isMenuOpen ? "active" : "" }`}>
       <MenuButtonContainer
         className="menu-button-container"
         style={{ borderRadius }}
