@@ -4,6 +4,7 @@ import Home from "./PAGES/Home";
 import AboutText from "./PAGES/AboutText";
 import HandDrawnWork from "./PAGES/HandDrawnWork";
 import PrintWork from "./PAGES/PrintWork";
+import CodeWork from "./PAGES/CodeWork";
 import HeaderContainer from "./HEADER/HeaderContainer";
 import Footer from "./FOOTER/Footer";
 
@@ -38,6 +39,7 @@ function MainPage() {
           <Route path="/about" element={<AboutText />}></Route>
           <Route path="/hand-drawn-work" element={<HandDrawnWork />}></Route>
           <Route path="/print-work" element={<PrintWork />}></Route>
+          <Route path="/code-work" element={<CodeWork />}></Route>
         </Routes>
       </div>
       <Footer>

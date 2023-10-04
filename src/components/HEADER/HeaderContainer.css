@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-@media (max-width: 664px) {
+@media (max-width: 907px) {
     .header-container {
         grid-area: unset;
         grid-row: 1;

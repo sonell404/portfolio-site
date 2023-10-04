@@ -40,6 +40,7 @@
   --size-1300: 14rem;
   --size-1400: 17rem;
   --size-1450: 17.3rem;
+  --size-2500: 32rem;
 
   --img-size-l: 35rem;
   --img-size-m: 25rem;
@@ -55,7 +56,7 @@
   --header-footer-height: 168px;
   --header-footer-width: 333px;
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   :root {
     --image-default-size: var(--img-size-m);
   }
@@ -219,7 +220,7 @@ body {
   width: 100%;
 }
 
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   #root {
     display: grid;
     grid-template-rows: min-content min-content auto min-content;

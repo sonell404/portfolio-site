@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Menu.css";
+import "./MenuButtonContainer.css";
 
 interface MenuButtonContainerProps {
   className?: string;
@@ -10,7 +10,7 @@ interface MenuButtonContainerProps {
 
 const MenuButtonContainer: React.FC<MenuButtonContainerProps> = ({className, children, style}) => {
   return (
-    <div className={className} style={style}>
+    <div className={`${className ? className : "button-container"}`} style={style}>
       {children}
     </div>
   );

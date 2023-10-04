@@ -33,11 +33,9 @@ const MenuContainer: React.FC<MenuContainerProps> = ({menuOpen}) => {
   return (
     <div className={`menu-container ${isMenuOpen ? "active" : "" }`}>
       <MenuButtonContainer
-        className="menu-button-container"
         style={{ borderRadius }}
       >
         <MenuButton
-          className="menu-button"
           onClick={handleMenuClick}
           ref={menuButtonRef}
         />

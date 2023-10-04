@@ -9,9 +9,7 @@ function PrintWork() {
   ).filter((url) => url.includes("PRINT"));
 
   return (
-    <>
-      <ImageGallery images={gallery} hasOutline={true} />
-    </>
+    <ImageGallery images={gallery} hasOutline={true} />
   );
 }
 

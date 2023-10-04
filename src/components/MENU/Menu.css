@@ -11,7 +11,7 @@
 .menu > div {
   overflow: hidden;
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu > div {
     display: flex;
     justify-content: center;
@@ -24,14 +24,14 @@
   grid-template-rows: 1fr;
   transform: translateY(-3px);
 }
-.menu.open ul > li {
+.menu-item {
   outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: border-radius 0.5s ease;
 }
-.menu.open ul > li:hover {
+.menu-item:hover {
   outline: 3px solid var(--clr-secondary);
   border-radius: 1.8rem;
 }
@@ -48,7 +48,7 @@
   align-items: center;
   margin: var(--size-550) var(--size-400);
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu > div > ul {
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 2rem;
@@ -67,7 +67,7 @@
   margin: 0.5rem;
   padding: 0.2rem;
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu > div > ul svg {
     height: 6rem;
     margin: 0.3rem;
@@ -103,7 +103,7 @@
 .menu ul > li > a > .menu-item__active > div > svg > * {
   stroke: var(--clr-main);
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu ul > li > a > .menu-item > div > svg > * {
     stroke-width: 4.5px;
   }
@@ -112,12 +112,12 @@
 .menu ul > li > a > .menu-item__active > div > svg > g > path {
   stroke: var(--clr-main);
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu ul > li > a > .menu-item__active > div > svg > g > path {
     stroke-width: 4px;
   }
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu ul > li > a > .menu-item > div > svg > g > path {
     stroke-width: 4.5px;
   }
@@ -125,7 +125,7 @@
 .menu ul > li > a > .menu-item__active > div > svg > g > circle {
   stroke: var(--clr-main);
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu ul > li > a > .menu-item > div > svg > g > circle {
     stroke-width: 4.5px;
   }
@@ -134,12 +134,12 @@
 .menu ul > .active > a > .menu-item__active > div > svg > g > path {
   stroke: var(--clr-main);
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu ul > .active > a > .menu-item__active > div > svg > g > path {
     stroke-width: 4px;
   }
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu ul > .active > a > .menu-item > div > svg > g > path {
     stroke-width: 4.5px;
   }
@@ -147,7 +147,7 @@
 .menu ul > .active > a > .menu-item__active > div > svg > g > g > path {
   stroke: var(--clr-main);
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .menu ul > .active > a > .menu-item > div > svg > g > g > path {
     stroke-width: 4.5px;
   }
@@ -165,37 +165,3 @@
 
 /* SVG MENU ICONS END */
 /*--------------------*/
-
-/* MENU OPEN BUTTON START */
-/* ---------------------- */
-
-.menu-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 333px;
-  padding: 0.5rem;
-  background-color: var(--clr-secondary);
-  border-radius: 0 0 var(--br-size) var(--br-size);
-  transition: border-radius 0.3s ease;
-  z-index: 9990;
-}
-@media (max-width: 664px) {
-  .menu-button-container {
-    width: 100%;
-  }
-}
-.menu-button {
-  width: 2rem;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  transition: transform 0.3s ease;
-  z-index: 9991;
-}
-.menu-button.rotate {
-  transform: rotate(45deg);
-}
-
-/* MENU OPEN BUTTON END */
-/* -------------------- */

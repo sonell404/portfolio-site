@@ -12,7 +12,6 @@ const HeaderContainer: React.FC<HeaderContainerProps> = ({ children }) => {
   return (
     <div className="header-container">
       {children}
-      
     </div>
   );
 };

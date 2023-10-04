@@ -8,6 +8,8 @@ function HandDrawnWork() {
     })
   ).filter((url) => url.includes("DRAWN"));
 
+  console.log(gallery[0]);
+
   return (
     <ImageGallery images={gallery} hasOutline={false}/>
   );

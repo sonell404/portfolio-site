@@ -80,7 +80,7 @@
   height: min-content;
   z-index: 9999;
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .image-viewer__controls {
     width: calc(var(--image-default-size) + 3rem);
   }
@@ -94,7 +94,7 @@
   height: min-content;
   z-index: 9999;
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .image-viewer__controls-light {
     width: calc(var(--image-default-size) + 3rem);
   }

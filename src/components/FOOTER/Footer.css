@@ -1,13 +1,14 @@
 .footer-container {
   display: none;
 }
-@media (max-width: 664px) {
+@media (max-width: 907px) {
   .footer-container {
     grid-row: 4;
     display: flex;
     width: 100%;
     border-radius: var(--br-size) var(--br-size) var(--br-size) var(--br-size);
     border: 3px solid var(--clr-secondary);
+    margin-top: var(--size-250);
     overflow: hidden;
   }
 

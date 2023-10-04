@@ -7,13 +7,13 @@ import PrintIcon from "../../assets/icons/print-icon.svg";
 import InstagramIcon from "../../assets/icons/instagram-icon.svg";
 import GithubIcon from "../../assets/icons/github-icon.svg";
 import MailIcon from "../../assets/icons/mail-icon.svg";
-import PhoneIcon from "../../assets/icons/phone-icon.svg";
+import CodeIcon from "../../assets/icons/code-icon.svg";
 
 import "./Menu.css";
 
 interface MenuProps {
-  isOpen?: boolean;
   className?: string;
+  isOpen?: boolean;
 }
 
 const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
@@ -29,7 +29,7 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
   return (
     <>
       <div
-        className="menu"
+        className={`${className} ${isOpen ? "open" : ""}`}
         onMouseEnter={() => setHasText(true)}
         onMouseLeave={() => setHasText(false)}
       >
@@ -68,11 +68,18 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
               </Link>
             </li>
             <li
-              onMouseEnter={() => setHoveredItem("INSTAGRAM")}
+              onMouseEnter={() => setHoveredItem("CODE")}
               onMouseLeave={() => setHoveredItem("")}
             >
-              <Link to="https://www.instagram.com/son__l/" target="_blank">
-                <ReactSVG className="menu-item" src={InstagramIcon} />
+              <Link to="/code-work">
+                <ReactSVG
+                  className={
+                    currentUrl.includes("code-work")
+                      ? "menu-item__active"
+                      : "menu-item"
+                  }
+                  src={CodeIcon}
+                />
               </Link>
             </li>
             <li
@@ -84,19 +91,19 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
               </Link>
             </li>
             <li
+              onMouseEnter={() => setHoveredItem("INSTAGRAM")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              <Link to="https://www.instagram.com/son__l/" target="_blank">
+                <ReactSVG className="menu-item" src={InstagramIcon} />
+              </Link>
+            </li>
+            <li
               onMouseEnter={() => setHoveredItem("MAIL")}
               onMouseLeave={() => setHoveredItem("")}
             >
               <Link to="/print-work">
                 <ReactSVG className="menu-item" src={MailIcon} />
-              </Link>
-            </li>
-            <li
-              onMouseEnter={() => setHoveredItem("PHONE")}
-              onMouseLeave={() => setHoveredItem("")}
-            >
-              <Link to="/print-work">
-                <ReactSVG className="menu-item" src={PhoneIcon} />
               </Link>
             </li>
           </ul>

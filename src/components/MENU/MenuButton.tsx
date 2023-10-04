@@ -1,6 +1,6 @@
 import React, { useState, forwardRef, Ref } from "react";
 
-import "./Menu.css";
+import "./MenuButton.css"
 
 interface MenuButtonProps {
   onClick?: () => void;
@@ -21,7 +21,7 @@ const MenuButton: React.ForwardRefRenderFunction<HTMLButtonElement, MenuButtonPr
 
   return (
     <>
-      <button ref={ref} className={`${className} ${isRotated ? "rotate" : ""}`} onClick={handleClick}>
+      <button ref={ref} className={`${className ? className : "button"} ${isRotated ? "rotate" : ""}`} onClick={handleClick}>
         <img
           src="src/assets/icons/menu-button.svg"
           alt="menu"

@@ -7,6 +7,7 @@ interface ImageGalleryProps {
   images: string[];
   hasOutline?: boolean;
   className?: string;
+  
 }
 
 const ImageGallery = ({ images, hasOutline, className }: ImageGalleryProps) => {
