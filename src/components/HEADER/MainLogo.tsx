@@ -6,7 +6,7 @@ export default function MainLogo() {
       <Link to="/">
         <img
           className="logo"
-          src="src/assets/icons/sonel-logo.svg"
+          src="../../assets/icons/sonel-logo.svg"
           alt="logo"
         />
       </Link>
