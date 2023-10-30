@@ -1,0 +1,15 @@
+.video-item-container {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  video {
+    border: 3px solid var(--clr-secondary);
+    border-radius: var(--br-size);
+    padding: 0.5rem;
+    transition: transform 0.12s ease-in 0s;
+  }
+  video:hover {
+    cursor: pointer;
+    transform: scale(0.97);
+  }

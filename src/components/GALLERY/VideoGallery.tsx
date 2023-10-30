@@ -1,4 +1,4 @@
-import Widget from "../WIDGET/Widget";
+import Widget from "../VIDEO/WIDGET/Widget";
 
 import "./VideoGallery.css";
 
@@ -30,13 +30,6 @@ const VideoGallery = ({ projects }: VideoGalleryProps) => {
           ))}
         </div>
       </div>
-      {/* {imageViewerIsOpen && (
-        <ImageViewer
-          images={images}
-          index={imageIndex}
-          isOpen={handleImageViewerIsOpen}
-        />
-      )} */}
     </>
   );
 };

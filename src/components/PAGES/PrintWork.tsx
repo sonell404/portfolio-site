@@ -1,4 +1,4 @@
-import ImageGallery from "../GALLERY/ImageGallery";
+import Gallery from "../GALLERY/Gallery";
 
 function PrintWork() {
   const gallery = Object.values(
@@ -9,7 +9,7 @@ function PrintWork() {
   ).filter((url) => url.includes("PRINT"));
 
   return (
-    <ImageGallery images={gallery} hasOutline={true} />
+    <Gallery dataType="image" media={gallery} hasOutline={true} />
   );
 }
 

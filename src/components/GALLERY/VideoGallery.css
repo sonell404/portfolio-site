@@ -23,14 +23,3 @@
   max-height: calc(100vh - 190px);
   overflow-y: auto;
 }
-
-.video-item-container {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-video {
-  border: 3px solid var(--clr-secondary);
-  border-radius: var(--br-size);
-  padding: 0.5rem;
-}

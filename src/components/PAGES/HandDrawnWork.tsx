@@ -1,4 +1,4 @@
-import ImageGallery from "../GALLERY/ImageGallery";
+import Gallery from "../GALLERY/Gallery";
 
 function HandDrawnWork() {
   const gallery = Object.values(
@@ -11,7 +11,7 @@ function HandDrawnWork() {
   console.log(gallery[0]);
 
   return (
-    <ImageGallery images={gallery} hasOutline={false}/>
+    <Gallery dataType="image" media={gallery} hasOutline={false}/>
   );
 }
 
