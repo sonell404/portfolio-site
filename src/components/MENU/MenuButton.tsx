@@ -1,5 +1,7 @@
 import React, { useState, forwardRef, Ref } from "react";
 
+import MenuButtonIcon from "../../assets/icons/menu-button.svg";
+
 import "./MenuButton.css"
 
 interface MenuButtonProps {
@@ -23,7 +25,7 @@ const MenuButton: React.ForwardRefRenderFunction<HTMLButtonElement, MenuButtonPr
     <>
       <button ref={ref} className={`${className ? className : "button"} ${isRotated ? "rotate" : ""}`} onClick={handleClick}>
         <img
-          src="src/assets/icons/menu-button.svg"
+          src={MenuButtonIcon}
           alt="menu"
         />
       </button>
