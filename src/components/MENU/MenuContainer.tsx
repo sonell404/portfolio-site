@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+
+import MenuBackground from "./MenuBackground";
 import Menu from "./Menu";
 import MenuButton from "./MenuButton";
 import MenuButtonContainer from "./MenuButtonContainer";
@@ -6,11 +8,11 @@ import MenuButtonContainer from "./MenuButtonContainer";
 import "./MenuContainer.css";
 
 interface MenuContainerProps {
-    menuOpen?: boolean;
-    children?: React.ReactNode;
-  }
+  menuOpen?: boolean;
+  children?: React.ReactNode;
+}
 
-const MenuContainer: React.FC<MenuContainerProps> = ({menuOpen}) => {
+const MenuContainer: React.FC<MenuContainerProps> = ({ menuOpen }) => {
   const withBorderRadius = "0 0 1.8rem 1.8rem";
   const [isMenuOpen, setIsMenuOpen] = useState(menuOpen || false);
   const [borderRadius, setBorderRadius] = useState(withBorderRadius);
@@ -31,17 +33,16 @@ const MenuContainer: React.FC<MenuContainerProps> = ({menuOpen}) => {
     }
   };
   return (
-    <div className={`menu-container ${isMenuOpen ? "active" : "" }`}>
-      <MenuButtonContainer
-        style={{ borderRadius }}
-      >
-        <MenuButton
-          onClick={handleMenuClick}
-          ref={menuButtonRef}
-        />
-      </MenuButtonContainer>
-      <Menu className="menu" isOpen={isMenuOpen} />
-    </div>
+    <>
+      {/* <div className={`menu-background-cover-layer ${isMenuOpen ? "on" : ""}`}></div> */}
+      <MenuBackground />
+      <div className={`menu-container ${isMenuOpen ? "active" : ""}`}>
+        <MenuButtonContainer style={{ borderRadius }}>
+          <MenuButton onClick={handleMenuClick} ref={menuButtonRef} />
+        </MenuButtonContainer>
+        <Menu className="menu" isOpen={isMenuOpen} />
+      </div>
+    </>
   );
 };
 
