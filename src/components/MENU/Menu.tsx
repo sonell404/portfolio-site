@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ReactSVG } from "react-svg";
 import { Link, useLocation } from "react-router-dom";
 
+// Import icons for menu
 import HandDrawnIcon from "../../assets/icons/hand-drawn-icon.svg";
 import PrintIcon from "../../assets/icons/print-icon.svg";
 import InstagramIcon from "../../assets/icons/instagram-icon.svg";
@@ -11,35 +12,46 @@ import CodeIcon from "../../assets/icons/code-icon.svg";
 
 import "./Menu.css";
 
+// MenuProps interface
 interface MenuProps {
   className?: string;
   isOpen?: boolean;
 }
 
+// Menu component
 const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
+  // Get current url
   const location = useLocation();
   const currentUrl = location.pathname;
 
+  // State for hovered item
   const [hoveredItem, setHoveredItemState] = useState("");
+  // State for menu item description container at bottom of menu
   const [hasText, setHasText] = useState(false);
-
+  // Show text description for menu item
   const setHoveredItem = (text: string) => {
     setHoveredItemState(text);
   };
   return (
     <>
+      {/* Menu container */}
       <div
         className={`${className} ${isOpen ? "open" : ""}`}
         onMouseEnter={() => setHasText(true)}
         onMouseLeave={() => setHasText(false)}
       >
+        {/* Menu */}
         <div>
           <ul>
+            {/* Menu items */}
             <li
+              // Set to currently active based on current url
               className={currentUrl.includes("hand-drawn-work") ? "active" : ""}
+              // Set text in description container at bottom of menu
               onMouseEnter={() => setHoveredItem("HAND DRAWN")}
               onMouseLeave={() => setHoveredItem("")}
             >
+              {/* Link to hand-drawn-work */}
               <Link to="/hand-drawn-work">
                 <ReactSVG
                   className={
@@ -111,6 +123,7 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
             </li>
           </ul>
         </div>
+        {/* Menu item description container at bottom of menu */}
         <div
           className="menu-footer"
           style={{ backgroundColor: hasText ? "transparent" : "white" }}
@@ -121,5 +134,6 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
     </>
   );
 };
+// End of Menu component
 
 export default Menu;

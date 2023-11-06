@@ -1,9 +1,11 @@
 import Gallery from "../GALLERY/Gallery";
 
+// Video imports
 import PatientManagement from "../../assets/videos/JAVA-2.mp4";
 import FrontendChallenge from "../../assets/videos/FRONTEND-CHALLENGE.mp4";
 import Portfolio from "../../assets/videos/PORTFOLIO.mp4";
 
+// ProjectData type - used to define the data type of the projectData array
 export type ProjectData = {
   title: string;
   tech: string;
@@ -11,6 +13,7 @@ export type ProjectData = {
   url: string;
 };
 
+// CodeWork component - renders the Gallery component and passes in the projectData array
 function CodeWork() {
   
   const projectData = [
@@ -38,6 +41,6 @@ function CodeWork() {
   ];
 
   return <Gallery dataType="video" media={projectData} />;
-}
+} // end of CodeWork component
 
 export default CodeWork;

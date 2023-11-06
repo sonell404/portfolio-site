@@ -1,18 +1,15 @@
 import Widget from "../VIDEO/WIDGET/Widget";
 
+import { ProjectData } from "../PAGES/CodeWork";
+
 import "./VideoGallery.css";
 
-type ProjectData = {
-  title: string;
-  tech: string;
-  description: string;
-  url: string;
-};
-
+// VideoGalleryProps interface - projects is an array of objects of type ProjectData (type defined in CodeWork page)
 interface VideoGalleryProps {
   projects: ProjectData[];
 }
 
+// VideoGallery component - Maps through the projects array and renders the Widget and video for each project
 const VideoGallery = ({ projects }: VideoGalleryProps) => {
   return (
     <>
@@ -33,5 +30,6 @@ const VideoGallery = ({ projects }: VideoGalleryProps) => {
     </>
   );
 };
+// end of VideoGallery component
 
 export default VideoGallery;

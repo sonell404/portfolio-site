@@ -1,11 +1,13 @@
 import "./VideoItem.css";
 
+// VideoItemProps interface
 interface VideoItemProps {
   project: string;
   index: number;
   onClick?: () => void;
 }
 
+// VideoItem component
 function VideoItem({ project, index, onClick }: VideoItemProps) {
   return (
     <div key={index} className="video-item-container">
@@ -13,5 +15,6 @@ function VideoItem({ project, index, onClick }: VideoItemProps) {
     </div>
   );
 }
+// End of VideoItem component
 
 export default VideoItem;

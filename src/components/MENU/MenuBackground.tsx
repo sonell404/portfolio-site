@@ -1,5 +1,6 @@
 import SonelIcon from "../../assets/icons/sonel-icon-large.svg";
 
+// Background image for behind menu
 const MenuBackground= () => {
     return (
         <div className="menu-background">
@@ -7,5 +8,6 @@ const MenuBackground= () => {
         </div>
     )
 }
+// End of MenuBackground
 
 export default MenuBackground;
