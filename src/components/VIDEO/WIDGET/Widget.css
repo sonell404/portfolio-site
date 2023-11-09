@@ -32,8 +32,6 @@
 } */
 
 .widget-container {
-  /* min-width: calc(min-content + 8rem); */
-  /* Center contents */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +39,6 @@
 }
 
 .widget-content {
-  overflow: scroll;
   background-color: var(--clr-secondary);
   border: 3px solid white;
   color: var(--clr-main);

@@ -23,3 +23,12 @@
   max-height: calc(100vh - 190px);
   overflow-y: auto;
 }
+@media (max-width: 907px) {
+  .video-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: unset;
+    max-height: unset;
+    justify-items: center;
+  }
+}

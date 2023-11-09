@@ -86,7 +86,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
   padding: 0.8rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 /*
@@ -95,7 +95,7 @@ body {
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 #root {
   height: 100%;
