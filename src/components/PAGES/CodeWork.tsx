@@ -1,6 +1,8 @@
 import Gallery from "../GALLERY/Gallery";
 
 // Video imports
+import EmployeeAdmin from "../../assets/videos/JAVA-4.mp4";
+import StudentManager from "../../assets/videos/JAVA-3.mp4";
 import PatientManagement from "../../assets/videos/JAVA-2.mp4";
 import FrontendChallenge from "../../assets/videos/FRONTEND-CHALLENGE.mp4";
 import Portfolio from "../../assets/videos/PORTFOLIO.mp4";
@@ -37,6 +39,20 @@ function CodeWork() {
       description:
         "The software was built to allow hospital administration staff to input patient data, have the patient assigned to the appropriate department and doctors, and keep track of the patient and their data as they move through their stages of care. For this project, I had no access to the Patient class that would be used for testing. The Patient class would implement a Patient interface with specific functionality and that interface was all I had access to. To work around this, I created a mock Patient class according to the available interface and then created a CurrentPatient class that would extend the Patient class - this would allow me to create the software prototype and also allow the next developer to easily plug in the originally unavailable Patient class for their own testing and development",
       url: PatientManagement
+    },
+    {
+      title: "Student Data Software",
+      tech: "Java",
+      description:
+      "A simple piece of software designed to allow the user to enter student data and save it to a file which is automatically placed in the users home directory. The user can either create a new file or write to an already existing file. The second option is to read from a file - this option will prompt the user to place the file to be read in the correct directory, where it will then be read and automatically, a status and error file will be generated. The status file will contain re-formatted student data as well as a workload rating based on the number of courses the student is enrolled in which is calculated by the program",
+      url: StudentManager
+    },
+    {
+      title: "Employee Admin Software",
+      tech: "Java",
+      description:
+      "An employee administration program that allows the user to create a company, add employee data to that company, list a selection or all of the employees in the created company, and return the total number of employees in the company. The program also has some default behaviour where a default company is created with a list 3 default employees. Each employee object is given an employee number which automatically increments with each new entry. Employees created by the user are stored in an ArrayList, allowing the staff of any created company to grow and shrink dynamically.",
+      url: EmployeeAdmin
     }
   ];
 
