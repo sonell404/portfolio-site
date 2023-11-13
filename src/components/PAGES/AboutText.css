@@ -1,7 +1,5 @@
 .son-el {
   font-family: var(--ff-secondary);
-  font-style: var(--ff-secondary-italic);
-  font-weight: var(--ff-secondary-bold);
 }
 .about-text-container {
   width: 100%;
@@ -17,9 +15,15 @@
   }
 }
 .about-text {
+  display: flex;
+  flex-direction: column;
   text-align: right;
   padding-right: 4rem;
   font-size: 3.6vw;
+  align-items: flex-end;
+}
+.about-text p {
+  cursor: pointer;
 }
 
 @media (max-width: 907px) {
@@ -37,5 +41,78 @@
     text-align: center;
     padding: 0;
     font-size: 1.8rem;
+    align-items: center;
+  }
+}
+
+.professionContainer {
+  display: grid;
+  grid-template-rows: 0fr;
+  cursor: pointer;
+  transition: grid-template-rows 0.3s ease;
+  justify-items: end;
+}
+@media (max-width: 907px) {
+  .professionContainer {
+    justify-items: center;
+  }
+}
+.professionContainer_inner {
+  overflow: hidden;
+  max-width: 50%;
+}
+.professionContainer.open {
+  grid-template-rows: 1fr;
+}
+@media (max-width: 907px) {
+  .professionContainer {
+    justify-items: center;
+  }
+  .professionContainer_inner {
+    max-width: 50%;
+  }
+}
+
+.professionContainer_inner > p {
+  max-width: max-content;
+  text-align: right;
+  font-size: 2.2vw;
+  font-style: italic;
+  /* color:#efe80b; */
+}
+@media (max-width: 907px) {
+  .professionContainer_inner > p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+.professionTitle {
+  width: fit-content;
+}
+
+.professionTitle:hover {
+  transform: scale(0.97);
+  transition: transform 0.2s ease-in-out;
+}
+
+.professionTitle > img {
+  display: inline;
+  margin-left: .8rem;
+}
+
+.profession-button {
+  max-width: 15px;
+}
+
+.professions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 907px) {
+  .professions {
+    align-items: center;
   }
 }

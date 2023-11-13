@@ -35,7 +35,7 @@ function MainPage() {
       </HeaderContainer>
       <MenuContainer />
       <div
-        className={`main-component-container ${
+        className={`main-component-container active ${
           useLocation().pathname !== "/" ? "active" : ""
         }`}
       >
@@ -52,7 +52,7 @@ function MainPage() {
         <AboutLogo
           version="footer"
           // If location is about, fill colour is black, else white
-          fillColour={location.pathname === "/about" ? "#ffffff" : "#212121"}
+          fillColour={location.pathname === "/about" || location.pathname === "/" ? "#ffffff" : "#212121"}
         />
       </Footer>
     </>

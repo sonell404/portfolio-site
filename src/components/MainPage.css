@@ -4,9 +4,14 @@
   /* margin: var(--size-200); */
 }
 
+.main-component-container {
+  overflow-y: auto;
+}
+
 @media (max-width: 907px) {
   .main-component-container {
     display: none;
+    overflow-y: unset;
   }
   .main-component-container.active {
     grid-area: unset;
