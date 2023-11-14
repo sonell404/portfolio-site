@@ -7,7 +7,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-top: 4rem;
 }
 @media (max-width: 1024px) {
   .about-text-container {
@@ -116,4 +115,13 @@
   .professions {
     align-items: center;
   }
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+.contact-details:hover {
+  transform: scale(0.97);
 }

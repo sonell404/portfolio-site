@@ -114,7 +114,7 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
               onMouseEnter={() => setHoveredItem("MAIL")}
               onMouseLeave={() => setHoveredItem("")}
             >
-              <Link to="/about">
+              <Link to="/contact-me">
                 <ReactSVG
                   className="menu-item"
                   src={MailIcon}

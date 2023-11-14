@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./AboutText.css";
+import { Link } from "react-router-dom";
 
 // AboutText component
 function AboutText() {
@@ -48,7 +49,12 @@ function AboutText() {
             </div>
           </div>
         </div>
-        +(353)-89-976-9880 sonell404@gmail.com
+        <Link to="/contact-me">
+          <div className="contact-details">
+            <p>Contact Me</p>
+          </div>
+        </Link>
+        {/* <div className="contact-details"><p>+(353)-89-976-9880</p><p>sonell404@gmail.com</p></div> */}
       </p>
     </div>
   );
