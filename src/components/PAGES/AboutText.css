@@ -19,7 +19,7 @@
   text-align: right;
   padding-right: 4rem;
   font-size: 3.6vw;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 .about-text p {
   cursor: pointer;
@@ -51,23 +51,25 @@
   transition: grid-template-rows 0.3s ease;
   justify-items: end;
 }
+
 @media (max-width: 907px) {
   .professionContainer {
     justify-items: center;
   }
 }
+
 .professionContainer_inner {
   overflow: hidden;
-  max-width: 50%;
   padding: 0.2rem;
+  display: inline-block;
+  max-width: 13rem;
 }
+
 .professionContainer.open {
   grid-template-rows: 1fr;
 }
+
 @media (max-width: 907px) {
-  .professionContainer {
-    justify-items: center;
-  }
   .professionContainer_inner {
     max-width: 50%;
   }
@@ -78,8 +80,8 @@
   text-align: right;
   font-size: 2.2vw;
   font-style: italic;
-  /* color:#efe80b; */
 }
+
 @media (max-width: 907px) {
   .professionContainer_inner > p {
     text-align: center;
@@ -89,6 +91,12 @@
 
 .professionTitle {
   width: fit-content;
+  align-self: flex-start;
+}
+@media (max-width: 907px) {
+  .professionTitle {
+    align-self: center;
+  }
 }
 
 .professionTitle:hover {
@@ -98,7 +106,7 @@
 
 .professionTitle > img {
   display: inline;
-  margin-left: .8rem;
+  margin-left: 0.8rem;
 }
 
 .profession-button {
@@ -108,20 +116,29 @@
 .professions {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
 }
+
 @media (max-width: 907px) {
   .professions {
     align-items: center;
   }
 }
 
+
 .contact-details {
+  font-family: var(--ff-secondary);
+  font-size: 2.7vw;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease-in-out;
 }
 .contact-details:hover {
   transform: scale(0.97);
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

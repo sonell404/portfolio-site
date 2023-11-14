@@ -49,12 +49,13 @@ function AboutText() {
             </div>
           </div>
         </div>
-        <Link to="/contact-me">
+        <Link className="contact-link" to="/contact-me">
+          _
           <div className="contact-details">
             <p>Contact Me</p>
           </div>
+          
         </Link>
-        {/* <div className="contact-details"><p>+(353)-89-976-9880</p><p>sonell404@gmail.com</p></div> */}
       </p>
     </div>
   );
