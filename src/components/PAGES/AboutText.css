@@ -21,9 +21,7 @@
   font-size: 3.6vw;
   align-items: flex-start;
 }
-.about-text p {
-  cursor: pointer;
-}
+
 
 @media (max-width: 907px) {
   .about-text-container {
@@ -47,7 +45,6 @@
 .professionContainer {
   display: grid;
   grid-template-rows: 0fr;
-  cursor: pointer;
   transition: grid-template-rows 0.3s ease;
   justify-items: end;
 }
@@ -92,6 +89,7 @@
 .professionTitle {
   width: fit-content;
   align-self: flex-start;
+  cursor: pointer;
 }
 @media (max-width: 907px) {
   .professionTitle {

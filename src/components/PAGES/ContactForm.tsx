@@ -56,7 +56,7 @@ const ContactForm = () => {
           <p>
             Message sent successfully!
             <br />
-            __________<p className="jiffy">I'll get back to you in a jiffy</p>
+            __________<p className="jiffy">I'll get back to you in a jiffy.</p>
           </p>
         </div>
       ) : (
