@@ -40,8 +40,8 @@ const Gallery = ({ dataType, media, hasOutline, className }: GalleryProps) => {
 
   // Conditional rendering of the gallery
   const currentGallery =
-  // Determine if it is a video gallery or image gallery. 
-  // If it is video, make sure the media is an object and not a string
+    // Determine if it is a video gallery or image gallery.
+    // If it is video, make sure the media is an object and not a string
     dataType === "video" && typeof media === "object" ? (
       <>
         <div className="video-gallery-container">
@@ -50,7 +50,13 @@ const Gallery = ({ dataType, media, hasOutline, className }: GalleryProps) => {
             {media.map((project, index) => {
               if (typeof project !== "string") {
                 return (
-                  <VideoItem key={index} project={project.url} index={index} onClick={() => handleMediaClick(index)} />
+                  <VideoItem
+                    key={index}
+                    project={project.url}
+                    index={index}
+                    onClick={() => handleMediaClick(index)}
+                    aria-label={`Video ${index}`}
+                  />
                 );
               }
             })}
@@ -83,6 +89,7 @@ const Gallery = ({ dataType, media, hasOutline, className }: GalleryProps) => {
                   src={image as string}
                   alt={`image-${index}`}
                   onClick={() => handleMediaClick(index)}
+                  aria-label={`Image ${index}`}
                 />
               );
             })}

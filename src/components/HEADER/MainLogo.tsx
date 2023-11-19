@@ -12,6 +12,8 @@ export default function MainLogo() {
           className="logo"
           src={SonelLogo}
           alt="logo"
+          aria-label="Sonel Logo"
+          role="img"
         />
       </Link>
     </div>

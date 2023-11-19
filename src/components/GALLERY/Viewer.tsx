@@ -61,7 +61,13 @@ const Viewer = ({
     dataType === "video" ? (
       <div className="image-viewer-container">
         {/* Viewer Backdrop */}
-        <div className="image-backdrop" onClick={handleImageViewerClose}>
+        <div
+          className="image-backdrop"
+          onClick={handleImageViewerClose}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Video Viewer Shaded Backdrop"
+        >
           <div className="image-viewer">
             <div className="image-viewer__image_active">
               {typeof singleMedia === "object" ? (
@@ -90,25 +96,31 @@ const Viewer = ({
           }
           // Click event to close the viewer
           onClick={handleImageViewerClose}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image Viewer Shaded Backdrop"
         >
           <div className="image-viewer">
             {/* Conditional rendering of the image gallery */}
-            {typeof media === "object" && media.map((image, i) => (
-              <div
-                // Conditional rendering of the active image
-                className={`${
-                  i === currentIndex
-                    ? "image-viewer__image_active"
-                    : "image-viewer__image_hidden"
-                }`}
-                key={i}
-              >
-                <img
-                  src={typeof image === "string" ? image : ""}
-                  alt={`image-${i}`}
-                />
-              </div>
-            ))}
+            {typeof media === "object" &&
+              media.map((image, i) => (
+                <div
+                  // Conditional rendering of the active image
+                  className={`${
+                    i === currentIndex
+                      ? "image-viewer__image_active"
+                      : "image-viewer__image_hidden"
+                  }`}
+                  key={i}
+                >
+                  <img
+                    src={typeof image === "string" ? image : ""}
+                    alt={`image-${i}`}
+                    role="img"
+                    aria-label={`Image ${i + 1}`}
+                  />
+                </div>
+              ))}
           </div>
         </div>
         <div
@@ -119,10 +131,10 @@ const Viewer = ({
           }
         >
           {/* Previous and next buttons */}
-          <button className="previous" onClick={handlePrevious}>
+          <button className="previous" onClick={handlePrevious} aria-label="Previous Image">
             <div className="circle"></div>
           </button>
-          <button className="next" onClick={handleNext}>
+          <button className="next" onClick={handleNext} aria-label="Next Image">
             <div className="circle"></div>
           </button>
         </div>

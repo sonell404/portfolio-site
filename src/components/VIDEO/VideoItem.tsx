@@ -11,7 +11,15 @@ interface VideoItemProps {
 function VideoItem({ project, index, onClick }: VideoItemProps) {
   return (
     <div key={index} className="video-item-container">
-      <video src={project} controls={false} muted loop autoPlay onClick={onClick} />
+      <video
+        src={project}
+        controls={false}
+        muted
+        loop
+        autoPlay
+        onClick={onClick}
+        aria-label="Video showing coding project in use"
+      />
     </div>
   );
 }

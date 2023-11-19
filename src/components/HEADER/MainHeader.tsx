@@ -7,7 +7,7 @@ interface MainHeaderProps {
 
 const MainHeader: React.FC<MainHeaderProps> = ({ children }) => {
   return (
-    <header className="main-header">
+    <header className="main-header" role="banner" aria-label="Main Header">
       {children}
     </header>
   );

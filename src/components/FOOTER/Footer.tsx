@@ -6,14 +6,18 @@ interface FooterProps {
 }
 
 // Footer component - renders the children passed in as props
-const Footer:React.FC<FooterProps> = ({children}) => {
+const Footer: React.FC<FooterProps> = ({ children }) => {
   return (
-    <footer className="footer-container">
-      <div className="footer-about-container">
+    <footer className="footer-container" role="contentinfo" aria-label="Footer">
+      <div
+        className="footer-about-container"
+        role="navigation"
+        aria-label="Footer Navigation"
+      >
         {children}
       </div>
     </footer>
   );
-} // end of Footer component
+}; // end of Footer component
 
 export default Footer;

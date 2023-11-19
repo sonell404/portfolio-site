@@ -39,6 +39,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
         className={`${className} ${isOpen ? "open" : ""}`}
         onMouseEnter={() => setHasText(true)}
         onMouseLeave={() => setHasText(false)}
+        role="menu"
+        aria-label="Main Menu"
       >
         {/* Menu */}
         <div>
@@ -50,6 +52,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
               // Set text in description container at bottom of menu
               onMouseEnter={() => setHoveredItem("HAND DRAWN")}
               onMouseLeave={() => setHoveredItem("")}
+              role="menuitem"
+              aria-label="Hand Drawn Work"
             >
               {/* Link to hand-drawn-work */}
               <Link to="/hand-drawn-work">
@@ -67,6 +71,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
               className={currentUrl.includes("print-work") ? "active" : ""}
               onMouseEnter={() => setHoveredItem("PRINT")}
               onMouseLeave={() => setHoveredItem("")}
+              role="menuitem"
+              aria-label="Print Work"
             >
               <Link to="/print-work">
                 <ReactSVG
@@ -82,6 +88,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
             <li
               onMouseEnter={() => setHoveredItem("CODE")}
               onMouseLeave={() => setHoveredItem("")}
+              role="menuitem"
+              aria-label="Code Work"
             >
               <Link to="/code-work">
                 <ReactSVG
@@ -97,6 +105,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
             <li
               onMouseEnter={() => setHoveredItem("GITHUB")}
               onMouseLeave={() => setHoveredItem("")}
+              role="menuitem"
+              aria-label="GitHub"
             >
               <Link to="https://github.com/sonell404" target="_blank">
                 <ReactSVG className="menu-item" src={GithubIcon} />
@@ -105,6 +115,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
             <li
               onMouseEnter={() => setHoveredItem("INSTAGRAM")}
               onMouseLeave={() => setHoveredItem("")}
+              role="menuitem"
+              aria-label="Instagram"
             >
               <Link to="https://www.instagram.com/son__l/" target="_blank">
                 <ReactSVG className="menu-item" src={InstagramIcon} />
@@ -113,12 +125,11 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
             <li
               onMouseEnter={() => setHoveredItem("MAIL")}
               onMouseLeave={() => setHoveredItem("")}
+              role="menuitem"
+              aria-label="Contact Me"
             >
               <Link to="/contact-me">
-                <ReactSVG
-                  className="menu-item"
-                  src={MailIcon}
-                />
+                <ReactSVG className="menu-item" src={MailIcon} />
               </Link>
             </li>
           </ul>
@@ -127,6 +138,8 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
         <div
           className="menu-footer"
           style={{ backgroundColor: hasText ? "transparent" : "white" }}
+          role="status"
+          aria-live="polite"
         >
           <p>{hoveredItem}</p>
         </div>

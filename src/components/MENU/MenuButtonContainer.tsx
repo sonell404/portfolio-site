@@ -10,9 +10,19 @@ interface MenuButtonContainerProps {
 }
 
 // MenuButtonContainer component
-const MenuButtonContainer: React.FC<MenuButtonContainerProps> = ({className, children, style}) => {
+const MenuButtonContainer: React.FC<MenuButtonContainerProps> = ({
+  className,
+  children,
+  style,
+}) => {
   return (
-    <div className={`${className ? className : "button-container"}`} style={style}>
+    <div
+      className={`${className ? className : "button-container"}`}
+      style={style}
+      role="button"
+      aria-label="Button Container"
+      tabIndex={0}
+    >
       {children}
     </div>
   );

@@ -30,7 +30,11 @@ function MainPage() {
           <AboutLogo
             version="header"
             // If location is about or home, fill colour is white, else black
-            fillColour={location.pathname === "/about" || location.pathname === "/" ? "#ffffff" : "#212121"}
+            fillColour={
+              location.pathname === "/about" || location.pathname === "/"
+                ? "#ffffff"
+                : "#212121"
+            }
           />
         </MainHeader>
       </HeaderContainer>
@@ -39,6 +43,8 @@ function MainPage() {
         className={`main-component-container active ${
           useLocation().pathname !== "/" ? "active" : ""
         }`}
+        role="main"
+        aria-label="Main Content Container"
       >
         {/* Routes for pages */}
         <Routes>
@@ -54,7 +60,11 @@ function MainPage() {
         <AboutLogo
           version="footer"
           // If location is about, fill colour is black, else white
-          fillColour={location.pathname === "/about" || location.pathname === "/" ? "#ffffff" : "#212121"}
+          fillColour={
+            location.pathname === "/about" || location.pathname === "/"
+              ? "#ffffff"
+              : "#212121"
+          }
         />
       </Footer>
     </>

@@ -48,7 +48,10 @@ const MenuContainer: React.FC<MenuContainerProps> = ({ menuOpen }) => {
   return (
     <>
       <MenuBackground />
-      <div className={`menu-container ${isMenuOpen ? "active" : ""}`}>
+      <div
+        className={`menu-container ${isMenuOpen ? "active" : ""}`}
+        aria-expanded={isMenuOpen}
+      >
         <MenuButtonContainer style={{ borderRadius }}>
           <MenuButton onClick={handleMenuClick} ref={menuButtonRef} />
         </MenuButtonContainer>

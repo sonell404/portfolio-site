@@ -2,7 +2,7 @@ import React, { useState, forwardRef, Ref } from "react";
 
 import MenuButtonIcon from "../../assets/icons/menu-button.svg";
 
-import "./MenuButton.css"
+import "./MenuButton.css";
 
 // MenuButtonProps interface
 interface MenuButtonProps {
@@ -12,7 +12,10 @@ interface MenuButtonProps {
 
 // MenuButton component
 // eslint-disable-next-line react-refresh/only-export-components
-const MenuButton: React.ForwardRefRenderFunction<HTMLButtonElement, MenuButtonProps> = (
+const MenuButton: React.ForwardRefRenderFunction<
+  HTMLButtonElement,
+  MenuButtonProps
+> = (
   { onClick, className },
   // Ref for button element
   ref: Ref<HTMLButtonElement>
@@ -30,11 +33,16 @@ const MenuButton: React.ForwardRefRenderFunction<HTMLButtonElement, MenuButtonPr
 
   return (
     <>
-      <button ref={ref} className={`${className ? className : "button"} ${isRotated ? "rotate" : ""}`} onClick={handleClick}>
-        <img
-          src={MenuButtonIcon}
-          alt="menu"
-        />
+      <button
+        ref={ref}
+        className={`${className ? className : "button"} ${
+          isRotated ? "rotate" : ""
+        }`}
+        onClick={handleClick}
+        aria-label="menu button"
+        aria-expanded={isRotated ? "true" : "false"}
+      >
+        <img src={MenuButtonIcon} alt="menu" />
       </button>
     </>
   );

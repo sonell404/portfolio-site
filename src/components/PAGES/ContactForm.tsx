@@ -63,15 +63,32 @@ const ContactForm = () => {
         <form className="contact-form" ref={form} onSubmit={sendEmail}>
           <div className="contact-form-section">
             <label>Name</label>
-            <input type="text" name="user_name" required />
+            <input
+              type="text"
+              name="user_name"
+              id="user_name"
+              required
+              aria-required="true"
+            />
           </div>
           <div className="contact-form-section">
             <label>Email</label>
-            <input type="email" name="user_email" required />
+            <input
+              type="email"
+              name="user_email"
+              id="user_email"
+              required
+              aria-required="true"
+            />
           </div>
           <div className="contact-form-section">
             <label>Message</label>
-            <textarea name="message" required />
+            <textarea
+              name="message"
+              id="message"
+              required
+              aria-required="true"
+            />
           </div>
           <input className="contact-form-button" type="submit" value="Send" />
         </form>
