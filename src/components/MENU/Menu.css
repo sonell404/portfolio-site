@@ -58,7 +58,7 @@
     margin: var(--size-650) var(--size-300);
   }
 }
-@media (min-height: 762px) and (max-height: 900px) {
+@media (min-height: 763px) and (max-height: 900px) {
   .menu > div > ul {
     grid-row-gap: 1.1rem;
     margin: var(--size-500) var(--size-300);
