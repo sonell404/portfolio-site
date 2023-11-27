@@ -45,7 +45,7 @@
 .menu > div > ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  gap: 0.3rem;
   justify-items: center;
   align-items: center;
   margin: var(--size-500) var(--size-400);
