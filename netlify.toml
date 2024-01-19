@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/print-work"
+  to = "src/components/PAGES/PrintWork.tsx"
+  status = 200
