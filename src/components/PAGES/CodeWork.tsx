@@ -6,6 +6,7 @@ import StudentManager from "../../assets/videos/JAVA-3.mp4";
 import PatientManagement from "../../assets/videos/JAVA-2.mp4";
 import FrontendChallenge from "../../assets/videos/FRONTEND-CHALLENGE.mp4";
 import Portfolio from "../../assets/videos/PORTFOLIO.mp4";
+import AllCityRecords from "../../assets/videos/AC-WORDPRESS.mp4";
 
 // ProjectData type - used to define the data type of the projectData array
 export type ProjectData = {
@@ -19,6 +20,13 @@ export type ProjectData = {
 function CodeWork() {
   
   const projectData = [
+    {
+      title: "All City Records",
+      tech: "WordPress (PHP, HTML, CSS, JavaScript)",
+      description:
+      "All City Records is a record label based in Dublin, Ireland. They wanted a website that would allow them to showcase their artists and their music, as well as a place where they could sell their merchandise. I built this website using WordPress as it was a requirement from the client. I used a pre-built theme and then styled and customised it to the clients needs. I also used a number of plugins to add functionality to the website, a shop, and a contact form. I also used a plugin to allow the client to easily update the website themselves. I also used a plugin to allow the client to easily update the website themselves.",
+      url: AllCityRecords
+    },
     {
       title: "Portfolio Website",
       tech: "React, Typescript",
