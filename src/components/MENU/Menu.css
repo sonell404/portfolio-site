@@ -67,6 +67,8 @@
     margin: var(--size-400) var(--size-100);
   }
 }
+
+/* Menu response */
 .menu .menu-item div {
   display: flex;
   justify-content: center;
@@ -78,7 +80,6 @@
   margin: 0.5rem;
   padding: 0.2rem;
 }
-/* Margin on .menu > div > ul svg automatically resizes based on netbook, notebook, and desktop device screens */
 @media (max-height: 600px) {
   .menu > div > ul svg {
     width: 6rem;
@@ -91,18 +92,18 @@
     margin: var(--size-500) var(--size-300);
   }
 }
-@media (min-height: 763px) and (max-height: 800px) {
+@media (min-height: 762px) and (max-height: 800px) {
   .menu > div > ul svg {
-    width: 8rem;
+    width: 7rem;
     padding: 0;
     margin: 0 .75rem;
   }
   .menu > div > ul {
-    grid-row-gap: 0;
-    margin: 0 var(--size-300);
+    grid-row-gap: 2rem;
+    margin: .80rem var(--size-300);
   }
   .menu > div > ul > li {
-    margin: var(--size-350) var(--size-300);
+    margin: var(--size-0) var(--size-300);
   }
 }
 @media (min-height: 800px) and (max-height: 900px) {
@@ -119,7 +120,7 @@
     margin: var(--size-350) var(--size-300);
   }
 }
-@media (min-height: 900px) and (max-height: 1080px) {
+@media (min-height: 900px) and (max-height: 1024px) {
   .menu > div > ul svg {
     width: 7rem;
     padding: 0;
@@ -131,6 +132,20 @@
   }
   .menu > div > ul > li {
     margin: var(--size-400) var(--size-300);
+  }
+}
+@media (min-height: 1024px) and (max-height: 1050px) {
+  .menu > div > ul svg {
+    width: 7rem;
+    padding: 0;
+    margin: 0.75rem 0.5rem;
+  }
+  .menu > div > ul {
+    grid-row-gap: 0;
+    margin: var(--size-600) var(--size-300);
+  }
+  .menu > div > ul > li {
+    margin: var(--size-650) var(--size-300);
   }
 }
 @media (min-height: 1050px) and (max-height: 1080px) {
@@ -161,22 +176,8 @@
     margin: var(--size-400) var(--size-300);
   }
 }
+/* Menu response */
 
-
-
-
-
-/* @media (max-width: 907px) {
-  .menu > div > ul svg {
-    height: 6rem;
-    margin: 0.3rem;
-  }
-}
-@media (min-height: 762px) and (max-height: 780px) {
-  .menu > div > ul svg {
-    margin: 0.3rem;
-  }
-} */
 
 .menu-item__active > div {
   display: flex;
