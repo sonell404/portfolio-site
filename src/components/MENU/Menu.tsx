@@ -58,6 +58,7 @@ const Menu: React.FC<MenuProps> = ({ className, isOpen }) => {
               {/* Link to hand-drawn-work */}
               <Link to="/hand-drawn-work">
                 <ReactSVG
+                  id="hand-drawn-work"
                   className={
                     currentUrl.includes("hand-drawn-work")
                       ? "menu-item__active"
