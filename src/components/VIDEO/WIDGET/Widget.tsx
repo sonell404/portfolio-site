@@ -6,9 +6,10 @@ interface WidgetProps {
   title: string;
   tech: string;
   description: string;
+  link?: string;
 }
 
-function Widget({ title, tech, description }: WidgetProps) {
+function Widget({ title, tech, description, link }: WidgetProps) {
   // State for open
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,6 +18,7 @@ function Widget({ title, tech, description }: WidgetProps) {
     setIsOpen(!isOpen);
   };
 
+  console.log(link + " is the link");
   return (
     <div
       className="widget-container"
@@ -31,6 +33,11 @@ function Widget({ title, tech, description }: WidgetProps) {
         </h2>
         <h3 className="widget-tech">- {tech} -</h3>
         <p className="widget-description">{description}</p>
+        <div className="widget-link">
+          <a href={link} target="_blank">
+            {link}
+          </a>
+        </div>
       </div>
     </div>
   );

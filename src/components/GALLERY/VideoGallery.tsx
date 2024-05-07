@@ -11,6 +11,7 @@ interface VideoGalleryProps {
 
 // VideoGallery component - Maps through the projects array and renders the Widget and video for each project
 const VideoGallery = ({ projects }: VideoGalleryProps) => {
+  console.log(projects[0].link + " is the test");
   return (
     <>
       <div className="video-gallery-container">
@@ -21,6 +22,7 @@ const VideoGallery = ({ projects }: VideoGalleryProps) => {
                 title={project.title}
                 tech={project.tech}
                 description={project.description}
+                link={project.link ? project.link : "nono"}
               />
               <video src={project.url} controls={false} muted loop autoPlay />
             </div>

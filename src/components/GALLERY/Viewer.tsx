@@ -76,6 +76,7 @@ const Viewer = ({
                   title={singleMedia.title}
                   tech={singleMedia.tech}
                   description={singleMedia.description}
+                  link={singleMedia.link}
                 />
               ) : (
                 <div>Oops!</div>

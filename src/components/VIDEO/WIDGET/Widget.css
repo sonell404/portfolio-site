@@ -59,6 +59,18 @@
   margin-top: 2rem;
 }
 
+.widget-link {
+  margin-top: 2rem;
+  border: 1px solid var(--clr-main);
+  border-radius: var(--br-size);
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.widget-link:hover {
+  background-color: var(--clr-main);
+  color: var(--clr-secondary);
+}
+
 /* .widget-container.open {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
