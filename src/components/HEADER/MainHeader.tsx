@@ -1,4 +1,4 @@
-import "./MainHeader.css";
+import "./Header.css";
 
 // MainHeaderProps interface - allow for children
 interface MainHeaderProps {

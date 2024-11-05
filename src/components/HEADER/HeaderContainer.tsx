@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./MainHeader.css";
+import "./Header.css";
 
 // HeaderContainerProps interface - allow for children
 interface HeaderContainerProps {

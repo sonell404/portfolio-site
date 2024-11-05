@@ -40,6 +40,8 @@
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease;
   justify-items: end;
+  
+  margin-bottom: 1rem
 }
 
 @media (max-width: 800px) {
@@ -57,8 +59,6 @@
 
 .professionContainer.open {
   grid-template-rows: 1fr;
-
-  margin-bottom: 1rem
 }
 
 @media (max-width: 800px) {
