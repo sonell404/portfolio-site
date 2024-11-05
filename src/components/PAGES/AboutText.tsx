@@ -30,7 +30,7 @@ function AboutText() {
             aria-hidden={openIndex !== 1}
           >
             <div className="professionContainer_inner">
-              <p>[React, TypeScript, JavaScript, Java, SQL]</p>
+              <p>[HTML, CSS, JS, TS, React]</p>
             </div>
           </div>
           <p
