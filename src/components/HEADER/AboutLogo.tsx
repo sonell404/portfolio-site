@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ReactSVG } from "react-svg";
 
-import AboutImage from "../../assets/icons/about.svg";
+import AboutImage from "../../assets/icons/about_minion.svg";
 
 // Interface for the props
 interface AboutLogoProps {

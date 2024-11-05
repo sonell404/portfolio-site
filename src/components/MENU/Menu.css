@@ -1,273 +1,82 @@
 .menu {
   position: relative;
-  border: 3px solid var(--clr-secondary);
-  border-radius: 0 0 var(--br-size) var(--br-size);
-  display: grid;
-  grid-template-rows: 0fr;
-  background-color: var(--clr-main);
-  transform: translateY(-3.2rem);
-  transition: grid-template-rows 0.3s, transform 0.3s ease-out, background-color 0.2s ease-out;
-  z-index: 9980 ;
+  display: flex;
+  height: fit-content;
+
+  align-self: end;
+}
+.mobile-menu .menu-list {
+  display: none;
+}
+.mobile-menu {
+  display: none;
 }
 
-.menu > div {
-  overflow: hidden;
+.menu-list {
+  width: 12rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: start;
+  justify-content: start;
+  flex-direction: column;
 }
-@media (max-width: 907px) {
-  .menu > div {
+@media (max-width: 930px) {
+  .mobile-menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 8rem;
+  }
+
+  .mobile-menu .menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .menu-list {
+    display: none;
+  }
+
+  .mobile-menu .menu-list {
+    gap: .75rem;
+  }
+
+  .mobile-menu .menu-list li {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    padding: .5rem;
+    margin-block: 0;
+    box-sizing: border-box;
+
+    transition: all 0.5s ease;
+  }
+
+  .mobile-menu .menu-list li:hover {
+    outline: 2px solid white;
+    border-radius: 2rem;
   }
 }
 
-.menu.open {
-  position: relative;
-  grid-template-rows: 1fr;
-  transform: translateY(-3px);
+.menu-list li {
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  padding: 1rem;
+  margin-block: 0.5rem;
+  box-sizing: border-box;
+
+  transition: all 0.5s ease;
 }
+.menu-list li:hover {
+  outline: 2px solid white;
+  border-radius: 2rem;
+}
+
 .menu-item {
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: border-radius 0.5s ease;
-}
-.menu-item:hover {
-  outline: 3px solid var(--clr-secondary);
-  border-radius: 1.8rem;
-}
-.menu-item__active {
-  background-color: var(--clr-secondary);
-  border-radius: var(--br-size);
-}
-
-.menu > div > ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.3rem;
-  justify-items: center;
-  align-items: center;
-  margin: var(--size-500) var(--size-400);
-}
-@media (max-width: 907px) {
-  .menu > div > ul {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 2rem;
-    width: 100%;
-    margin: var(--size-650) var(--size-300);
-  }
-}
-@media (min-height: 763px) and (max-height: 900px) {
-  .menu > div > ul {
-    grid-row-gap: 1.1rem;
-    margin: var(--size-500) var(--size-300);
-  }
-  .menu > div > ul > li {
-    margin: var(--size-400) var(--size-100);
-  }
-}
-
-/* Menu response */
-.menu .menu-item div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu > div > ul svg {
-  width: 7.9rem;
-  height: 7.9rem;
-  margin: 0.5rem;
-  padding: 0.2rem;
-}
-@media (max-height: 600px) {
-  .menu > div > ul svg {
-    width: 6rem;
-    padding: 0;
-    margin: 0.2rem;
-  }
-  .menu > div > ul {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 0rem;
-    margin: var(--size-500) var(--size-300);
-  }
-}
-@media (min-height: 762px) and (max-height: 800px) {
-  .menu > div > ul svg {
-    width: 7rem;
-    padding: 0;
-    margin: 0 .75rem;
-  }
-  .menu > div > ul {
-    grid-row-gap: 2rem;
-    margin: .80rem var(--size-300);
-  }
-  .menu > div > ul > li {
-    margin: var(--size-0) var(--size-300);
-  }
-}
-@media (min-height: 800px) and (max-height: 900px) {
-  .menu > div > ul svg {
-    width: 7rem;
-    padding: 0;
-    margin: 0 .5rem;
-  }
-  .menu > div > ul {
-    grid-row-gap: 0;
-    margin: var(--size-500) var(--size-300);
-  }
-  .menu > div > ul > li {
-    margin: var(--size-350) var(--size-300);
-  }
-}
-@media (min-height: 900px) and (max-height: 1024px) {
-  .menu > div > ul svg {
-    width: 7rem;
-    padding: 0;
-    margin: 0.75rem 0.5rem;
-  }
-  .menu > div > ul {
-    grid-row-gap: 0;
-    margin: var(--size-600) var(--size-300);
-  }
-  .menu > div > ul > li {
-    margin: var(--size-400) var(--size-300);
-  }
-}
-@media (min-height: 1024px) and (max-height: 1050px) {
-  .menu > div > ul svg {
-    width: 7rem;
-    padding: 0;
-    margin: 0.75rem 0.5rem;
-  }
-  .menu > div > ul {
-    grid-row-gap: 0;
-    margin: var(--size-600) var(--size-300);
-  }
-  .menu > div > ul > li {
-    margin: var(--size-650) var(--size-300);
-  }
-}
-@media (min-height: 1050px) and (max-height: 1080px) {
-  .menu > div > ul svg {
-    width: 7rem;
-    padding: 0;
-    margin: 1.5rem 0.5rem;
-  }
-  .menu > div > ul {
-    grid-row-gap: 2rem;
-    margin: var(--size-600) var(--size-300);
-  }
-  .menu > div > ul > li {
-    margin: var(--size-400) var(--size-300);
-  }
-}
-@media (min-height: 1080px) and (max-height: 1200px) {
-  .menu > div > ul svg {
-    width: 7rem;
-    padding: 0;
-    margin: 1.5rem 0.75rem;
-  }
-  .menu > div > ul {
-    grid-row-gap: 3rem;
-    margin: var(--size-600) var(--size-300);
-  }
-  .menu > div > ul > li {
-    margin: var(--size-400) var(--size-300);
-  }
-}
-/* Menu response */
-
-
-.menu-item__active > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--fs-700);
-  background-color: transparent;
-  outline: 3px solid var(--clr-secondary);
-  border-radius: 0 0 var(--br-size) var(--br-size);
-  height: 0;
   width: 100%;
-  transition: all 0.3s ease;
-}
-.menu.open .menu-footer {
-  display: flex;
-  height: var(--size-700);
+  height: auto; /* Ensure height scales with aspect ratio */
 }
 
-/*----------------------*/
-/* SVG MENU ICONS START */
-
-/* GITHUB, PHONE ICONS */
-.menu ul > li > a > .menu-item__active > div > svg > * {
-  stroke: var(--clr-main);
+.menu-list .active {
+  outline: 2px solid white;
+  border-radius: 2rem;
 }
-@media (max-width: 907px) {
-  .menu ul > li > a > .menu-item > div > svg > * {
-    stroke-width: 4.5px;
-  }
-}
-/* PRINT, INSTA, MAIL ICONS */
-.menu ul > li > a > .menu-item__active > div > svg > g > path {
-  stroke: var(--clr-main);
-}
-@media (max-width: 907px) {
-  .menu ul > li > a > .menu-item__active > div > svg > g > path {
-    stroke-width: 4px;
-  }
-}
-@media (max-width: 907px) {
-  .menu ul > li > a > .menu-item > div > svg > g > path {
-    stroke-width: 4.5px;
-  }
-}
-.menu ul > li > a > .menu-item__active > div > svg > g > circle {
-  stroke: var(--clr-main);
-}
-@media (max-width: 907px) {
-  .menu ul > li > a > .menu-item > div > svg > g > circle {
-    stroke-width: 4.5px;
-  }
-}
-/* HAND DRAWN ICON */
-.menu ul > .active > a > .menu-item__active > div > svg > g > path {
-  stroke: var(--clr-main);
-}
-@media (max-width: 907px) {
-  .menu ul > .active > a > .menu-item__active > div > svg > g > path {
-    stroke-width: 4px;
-  }
-}
-@media (max-width: 907px) {
-  .menu ul > .active > a > .menu-item > div > svg > g > path {
-    stroke-width: 4.5px;
-  }
-}
-.menu ul > .active > a > .menu-item__active > div > svg > g > g > path {
-  stroke: var(--clr-main);
-}
-@media (max-width: 907px) {
-  .menu ul > .active > a > .menu-item > div > svg > g > g > path {
-    stroke-width: 4.5px;
-  }
-}
-
-/* MENU ITEM ACTIVE */
-.menu > ul > .active {
-  background-color: var(--clr-secondary);
-  border-radius: var(--br-size);
-  transition: background-color 0.3s ease;
-}
-.menu > ul > .active > a > div > div > svg > path {
-  stroke: black;
-}
-
-/* SVG MENU ICONS END */
-/*--------------------*/

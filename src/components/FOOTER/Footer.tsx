@@ -8,14 +8,8 @@ interface FooterProps {
 // Footer component - renders the children passed in as props
 const Footer: React.FC<FooterProps> = ({ children }) => {
   return (
-    <footer className="footer-container" role="contentinfo" aria-label="Footer">
-      <div
-        className="footer-about-container"
-        role="navigation"
-        aria-label="Footer Navigation"
-      >
-        {children}
-      </div>
+    <footer className="main-footer" role="contentinfo" aria-label="Footer">
+      {children}
     </footer>
   );
 }; // end of Footer component

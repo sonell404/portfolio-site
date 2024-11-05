@@ -1,4 +1,5 @@
 import "./App.css";
+import "./reset.css";
 
 // MainPage component
 import MainPage from "./components/MainPage";

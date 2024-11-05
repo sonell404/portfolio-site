@@ -13,7 +13,7 @@ import Footer from "./FOOTER/Footer";
 import AboutLogo from "./HEADER/AboutLogo";
 import MainHeader from "./HEADER/MainHeader";
 import MainLogo from "./HEADER/MainLogo";
-import MenuContainer from "./MENU/MenuContainer";
+import Menu from "./MENU/Menu";
 
 import "./MainPage.css";
 
@@ -36,25 +36,28 @@ function MainPage() {
                 : "#212121"
             }
           />
+          <Menu className="mobile-menu" />
         </MainHeader>
       </HeaderContainer>
-      <MenuContainer />
-      <div
-        className={`main-component-container active ${
-          useLocation().pathname !== "/" ? "active" : ""
-        }`}
-        role="main"
-        aria-label="Main Content Container"
-      >
-        {/* Routes for pages */}
-        <Routes>
-          <Route path="/" element={<AboutText />}></Route>
-          <Route path="/about" element={<AboutText />}></Route>
-          <Route path="/hand-drawn-work" element={<HandDrawnWork />}></Route>
-          <Route path="/print-work" element={<PrintWork />}></Route>
-          <Route path="/code-work" element={<CodeWork />}></Route>
-          <Route path="/contact-me" element={<ContactForm />}></Route>
-        </Routes>
+      <div className="menu-and-content">
+        <Menu className="menu" />
+        <div
+          className={`main-component-container active ${
+            useLocation().pathname !== "/" ? "active" : ""
+          }`}
+          role="main"
+          aria-label="Main Content Container"
+        >
+          {/* Routes for pages */}
+          <Routes>
+            <Route path="/" element={<AboutText />}></Route>
+            <Route path="/about" element={<AboutText />}></Route>
+            <Route path="/hand-drawn-work" element={<HandDrawnWork />}></Route>
+            <Route path="/print-work" element={<PrintWork />}></Route>
+            <Route path="/code-work" element={<CodeWork />}></Route>
+            <Route path="/contact-me" element={<ContactForm />}></Route>
+          </Routes>
+        </div>
       </div>
       <Footer>
         <AboutLogo

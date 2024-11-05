@@ -1,5 +1,10 @@
 .image-gallery-container {
-  margin: 0.5rem;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+.image-gallery-container::-webkit-scrollbar {
+  display: none;
 }
 @media (max-width: 907px) {
   .image-gallery-container {

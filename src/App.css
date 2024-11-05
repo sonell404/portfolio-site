@@ -55,8 +55,11 @@
   --fs-body: var(--fs-900);
   --fs-body-mobile: var(--fs-700);
 
-  --header-footer-height: 168px;
+  --header-footer-height: 10%;
   --header-footer-width: 333px;
+
+  --header-logo-size: 25vw;
+  --header-logo-min: 420px;
 }
 @media (max-width: 907px) {
   :root {
@@ -64,145 +67,12 @@
   }
 }
 
-/*
-  Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-/*
-    Remove default margin
-  */
-* {
-  margin: 0;
-}
-/*
-    Typographic tweaks!
-    Add accessible line-height
-    Improve text rendering
-  */
-body {
-  line-height: 1.2;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeSpeed;
-  padding: 0.8rem;
-  /* margin-bottom: 1rem; */
-}
-
-/*
-    Set core root defaults
-  */
-html,
-body {
-  height: 100%;
-  /* overflow-x: hidden; */
-}
-#root {
-  height: 100%;
-}
-
-/*
-    Improve media defaults
-  */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-/*
-    Remove built-in form typography styles
-  */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/*
-    Remove default button styles
-  */
-
-button {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-
-/*
-    Remove default anchor styles
-  */
-
-a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/*
-    Remove default list styles
-  */
-
-ul,
-ol {
-  list-style: none;
-  padding-inline-start: 0px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-}
-
-/*
-    Remove all animations, transitions and smooth scroll for people that prefer not to see them
-  */
-
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/*
-    Avoid text overflows
-  */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-/*
-    Create a root stacking context
-  */
-#root,
-#__next {
-  isolation: isolate;
-}
-
 /* general styling */
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
 
 body {
   background-color: var(--clr-main);
@@ -215,19 +85,16 @@ body {
   position: relative;
 }
 
-#root {
-  display: grid;
-  grid-template-columns: var(--header-footer-width) auto;
-  grid-template-rows: var(--header-footer-height) auto;
-  width: 100%;
-}
+.menu-and-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-@media (max-width: 907px) {
-  #root {
-    display: grid;
-    grid-template-rows: min-content min-content auto min-content;
-    width: min-content;
-    height: 96vh;
-    margin: 0 auto;
+  flex-grow: 1;
+}
+@media (max-width: 930px) {
+  .menu-and-content {
+    flex-direction: column;
+    justify-content: center;
   }
 }

@@ -14,9 +14,6 @@ function AboutText() {
   return (
     <div className="about-text-container">
       <p className="about-text">
-        <p>
-          Sonel <span className="son-el">(son-el)</span>
-        </p>
         <div className="professions">
           <p
             className="professionTitle"
@@ -25,7 +22,7 @@ function AboutText() {
             aria-expanded={openIndex === 1}
             aria-controls="professionContainer1"
           >
-            1 - developer
+            01. developer
           </p>
           <div
             id="professionContainer1"
@@ -43,7 +40,7 @@ function AboutText() {
             aria-expanded={openIndex === 2}
             aria-controls="professionContainer2"
           >
-            2 - illustrator
+            02. illustrator
           </p>
           <div
             id="professionContainer2"
@@ -61,7 +58,7 @@ function AboutText() {
             aria-expanded={openIndex === 3}
             aria-controls="professionContainer3"
           >
-            3 - designer
+            03. designer
           </p>
           <div
             id="professionContainer3"
@@ -73,8 +70,10 @@ function AboutText() {
             </div>
           </div>
         </div>
+        <div className="about-separator">
+        _
+        </div>
         <Link className="contact-link" to="/contact-me">
-          _
           <div className="contact-details">
             <p>Contact Me</p>
           </div>
