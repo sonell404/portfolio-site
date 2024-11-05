@@ -1,0 +1,9 @@
+.home-face-image {
+    width: 35%;
+    margin: 0 2.5rem 7.5rem 2.5rem;
+}
+@media (max-width: 930px) {
+    .home-face-image {
+        margin: 0 2.5rem 2.5rem 2.5rem;
+    }
+}

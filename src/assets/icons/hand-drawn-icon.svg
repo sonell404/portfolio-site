@@ -3,13 +3,13 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 163.9 163.9" style="enable-background:new 0 0 163.9 163.9;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:8;stroke-miterlimit:10;}
 </style>
 <g>
 	<path class="st0" d="M17.6,15.7c-0.6,0.6-1.3,1.3-1.9,1.9L14.1,16l-0.3-2.2l2.2,0.3L17.6,15.7z"/>
-	<path class="st0" d="M150.4,141.5v1l-3.9,3.9l-3.9,3.9h-1l-2.3-2.3l-0.7-0.1L53.2,63.2L52.7,62l-0.1-0.1l-24.9-25v0l0.3-1.8l0,0v0
-		l-2-2.1l-0.2-0.2L17,21.3l-1.2-3.6l0,0c0.6-0.6,1.3-1.3,1.9-1.9l0,0.1l3.6,1.2l11.3,8.9l0.2,0.2l2.1,2l0,0l1.8-0.3l0,0l25,24.9
-		l1.3,0.5l84.8,85.3l0.1,0.7L150.4,141.5z"/>
+	<path class="st0" d="M150.4,141.5v1l-3.9,3.9l-3.9,3.9h-1l-2.3-2.3l-0.7-0.1L53.2,63.2L52.7,62l-0.1-0.1l-24.9-25l0,0l0.3-1.8l0,0
+		l0,0L26,33l-0.2-0.2L17,21.3l-1.2-3.6l0,0c0.6-0.6,1.3-1.3,1.9-1.9l3.6,1.3L32.6,26l0.2,0.2l2.1,2l0,0l1.8-0.3l0,0l25,24.9l1.3,0.5
+		l84.8,85.3l0.1,0.7L150.4,141.5z"/>
 	<g>
 		<path class="st0" d="M53.2,63.2c2.1-2.6,7.7-8.2,10-10"/>
 		<path class="st0" d="M27.8,36.8c2.2-2.5,6.7-7,9-9"/>

@@ -4,8 +4,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import AboutText from "./PAGES/AboutText";
 import HandDrawnWork from "./PAGES/HandDrawnWork";
 import PrintWork from "./PAGES/PrintWork";
-import CodeWork from "./PAGES/CodeWork";
 import ContactForm from "./PAGES/ContactForm";
+import HomeFace from "./PAGES/HomeFace";
 import HeaderContainer from "./HEADER/HeaderContainer";
 import Footer from "./FOOTER/Footer";
 
@@ -41,6 +41,10 @@ function MainPage() {
       </HeaderContainer>
       <div className="menu-and-content">
         <Menu className="menu" />
+        {location.pathname === "" || location.pathname === "/" ? (
+          <HomeFace />
+        ) : null}
+
         <div
           className={`main-component-container active ${
             useLocation().pathname !== "/" ? "active" : ""
@@ -54,7 +58,6 @@ function MainPage() {
             <Route path="/about" element={<AboutText />}></Route>
             <Route path="/hand-drawn-work" element={<HandDrawnWork />}></Route>
             <Route path="/print-work" element={<PrintWork />}></Route>
-            <Route path="/code-work" element={<CodeWork />}></Route>
             <Route path="/contact-me" element={<ContactForm />}></Route>
           </Routes>
         </div>
