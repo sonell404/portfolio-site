@@ -11,7 +11,7 @@ function HandDrawnWork() {
   ).filter((url) => url.includes("DRAWN"));
 
   return (
-    <Gallery dataType="image" media={gallery} hasOutline={false}/>
+    <Gallery media={gallery} hasOutline={false}/>
   );
 }
 // End of HandDrawnWork component

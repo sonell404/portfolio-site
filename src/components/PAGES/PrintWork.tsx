@@ -11,7 +11,7 @@ function PrintWork() {
   ).filter((url) => url.includes("PRINT"));
 
   return (
-    <Gallery dataType="image" media={gallery} hasOutline={true} />
+    <Gallery media={gallery} hasOutline={true} />
   );
 }
 // End of PrintWork component
