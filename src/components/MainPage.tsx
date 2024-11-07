@@ -31,7 +31,7 @@ function MainPage() {
             version="header"
             // If location is about or home, fill colour is white, else black
             fillColour={
-              location.pathname === "/about" || location.pathname === "/"
+              location.pathname === "/about" || location.pathname === "/home"
                 ? "#ffffff"
                 : "#212121"
             }
