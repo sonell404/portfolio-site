@@ -54,7 +54,7 @@ function MainPage() {
         >
           {/* Routes for pages */}
           <Routes>
-            <Route path="/" element={<AboutText />}></Route>
+            <Route path="/home" element={<AboutText />}></Route>
             <Route path="/about" element={<AboutText />}></Route>
             <Route path="/hand-drawn-work" element={<HandDrawnWork />}></Route>
             <Route path="/print-work" element={<PrintWork />}></Route>
